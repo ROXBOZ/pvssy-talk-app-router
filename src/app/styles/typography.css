@@ -1,6 +1,7 @@
 @font-face {
   font-family: "ESRebond";
-  src: url("/fonts/ESRebondGrotesque-Semibold.otf") format("opentype"),
+  src:
+    url("/fonts/ESRebondGrotesque-Semibold.otf") format("opentype"),
     url("/fonts/ESRebondGrotesque-Semibold.ttf") format("truetype");
   font-display: swap;
 }
@@ -29,18 +30,12 @@
   font-display: swap;
 }
 
-/* h2 {
-  @apply text-2xl;
+.font-heading {
   font-family: "ESRebond", sans-serif;
 }
 
-h3 {
-  @apply text-xl;
-  font-family: "ESRebond", sans-serif;
-} */
-
-.font-heading {
-  font-family: "ESRebond", sans-serif;
+.font-paragraph {
+  font-family: "ESKlarheit-Book", sans-serif;
 }
 
 h2,
