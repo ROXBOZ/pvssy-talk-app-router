@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "ESRebond";
+  src: url("/fonts/ESRebondGrotesque-Semibold.otf") format("opentype"),
+    url("/fonts/ESRebondGrotesque-Semibold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ESKlarheit-Book";
+  src: url("/fonts/ESKlarheitGrotesk-Bk.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ESKlarheit-Book-Italic";
+  src: url("/fonts/ESKlarheitGrotesk-BkIt.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ESKlarheit-Bold";
+  src: url("/fonts/ESKlarheitGrotesk-Bd.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ESKlarheit-Bold-Italic";
+  src: url("/fonts/ESKlarheitGrotesk-BdIt.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* h2 {
+  @apply text-2xl;
+  font-family: "ESRebond", sans-serif;
+}
+
+h3 {
+  @apply text-xl;
+  font-family: "ESRebond", sans-serif;
+} */
+
+.font-heading {
+  font-family: "ESRebond", sans-serif;
+}
+
+h2,
+h3,
+p {
+  @apply max-w-[65ch];
+}
