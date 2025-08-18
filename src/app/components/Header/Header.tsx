@@ -1,6 +1,6 @@
 "use client";
 
-import HomeScreen from "../Homepage/HomeScreen";
+import HomeScreen from "./HomeScreen";
 import React from "react";
 import TopBar from "./TopBar";
 import { usePathname } from "next/navigation";
