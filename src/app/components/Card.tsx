@@ -3,11 +3,11 @@ import React from "react";
 
 function Card({ showButton }: { showButton: boolean }) {
   return (
-    <div className="bg-gray-100 col-span-2 w-full">
-      <div className="bg-gray-200 aspect-video">img</div>
-      <div className="p-4 flex justify-between items-baseline gap-4">
+    <div className="col-span-2 w-full bg-gray-200">
+      <div className="aspect-video bg-gray-300">img</div>
+      <div className="flex items-baseline justify-between gap-4 p-4">
         <h3 className="font-heading text-xl">Title</h3>
-        {showButton && <ButtonLink />}
+        {showButton && <ButtonLink hasArrow={true} />}
       </div>
     </div>
   );
