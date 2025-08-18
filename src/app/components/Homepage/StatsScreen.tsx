@@ -3,13 +3,13 @@ import React from "react";
 
 function StatsScreen() {
   return (
-    <div className="h-[95vh] customGrid items-center justify-center bg-gray-100">
-      <div className="flex flex-col col-start-1 col-end-7 lg:col-start-3 lg:col-end-5 text-center items-center gap-4">
-        <p className="text-2xl font-heading">
+    <div className="customGrid h-[95vh] items-center justify-center bg-violet-100">
+      <div className="col-start-1 col-end-7 flex flex-col items-center gap-4 text-center lg:col-start-3 lg:col-end-5">
+        <p className="font-heading text-2xl">
           Les douleurs pendant les rapports sexuels concernent une personne à
           vulve sur cinq. C’est loin d’être un problème isolé.
         </p>
-        <ButtonLink />
+        <ButtonLink hasArrow={false} />
       </div>
     </div>
   );
