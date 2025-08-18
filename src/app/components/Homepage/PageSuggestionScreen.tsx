@@ -5,10 +5,10 @@ import React from "react";
 function PageSuggestionScreen() {
   return (
     <div className="customGrid h-[95vh]">
-      <div className="col-start-1 col-span-6 lg:col-span-3 flex items-center">
+      <div className="col-span-6 col-start-1 flex items-center lg:col-span-3">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
-            <h2 className="text-3xl font-heading">
+            <h2 className="font-heading text-3xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
               incidunt nobis.
             </h2>
@@ -19,10 +19,10 @@ function PageSuggestionScreen() {
               illo perspiciatis!
             </p>
           </div>
-          <ButtonLink />
+          <ButtonLink hasArrow={true} />
         </div>
       </div>
-      <div className="lg:col-start-4 col-start-1 col-span-6 w-full bg-gray-200 lg:col-span-3">
+      <div className="col-span-6 col-start-1 w-full bg-gray-200 lg:col-span-3 lg:col-start-4">
         img
       </div>
     </div>
