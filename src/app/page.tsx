@@ -2,9 +2,9 @@ import ArticlesDirectory from "./components/Homepage/ArticlesDirectory/ArticlesD
 import PageSuggestionScreen from "./components/Homepage/PageSuggestionScreen";
 import PagesDirectory from "./components/Homepage/PagesDirectory";
 import StatsScreen from "./components/Homepage/StatsScreen";
+import { client } from "../../config/sanity";
 
-export default function Home() {
-  //NOTE Homescreen available in Header
+export default async function Home() {
   return (
     <div className="flex flex-col gap-24">
       <StatsScreen />
