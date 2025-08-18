@@ -8,7 +8,7 @@ function Footer() {
       <Sponsors />
       <footer
         aria-label="Footer"
-        className="bg-gray-300 py-12 p-4 flex flex-col md:flex-row gap-12 justify-between"
+        className="flex flex-col justify-between gap-12 bg-violet-300 p-4 py-12 md:flex-row"
       >
         <div>
           <h2 className="font-heading text-2xl">Collab</h2>
