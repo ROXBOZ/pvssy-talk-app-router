@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import ButtonLink from "../ButtonLink";
 import React from "react";
 import { client } from "../../../../config/sanity";
@@ -15,17 +17,17 @@ interface Stats {
 }
 
 export default async function StatsScreen() {
-  const stats: Stats | null = await getStatsScreenData();
-  if (!stats) return null;
+  const data: Stats | null = await getData();
+  if (!data) return null;
 
   return (
     <div className="customGrid h-[95vh] items-center justify-center bg-violet-100">
       <div className="col-start-1 col-end-7 flex flex-col items-center gap-4 text-center lg:col-start-3 lg:col-end-5">
-        {stats.text && <p className="font-heading text-2xl">{stats.text}</p>}
-        {stats.callToAction?.label && (
+        {data.text && <p className="font-heading text-2xl">{data.text}</p>}
+        {data.callToAction?.label && (
           <ButtonLink
-            label={stats.callToAction.label}
-            href={`/${stats.callToAction.link?.slug?.current ?? ""}`}
+            label={data.callToAction.label}
+            href={`/${data.callToAction.link?.slug?.current ?? ""}`}
             hasArrow={true}
           />
         )}
@@ -34,7 +36,7 @@ export default async function StatsScreen() {
   );
 }
 
-async function getStatsScreenData(): Promise<Stats | null> {
+async function getData(): Promise<Stats | null> {
   try {
     return await client.fetch(
       `*[_type == "homepage" && !(_id in path("drafts.**"))][0]{
