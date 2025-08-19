@@ -1,4 +1,4 @@
-import Card, { CardBaseProps } from "../UIElements/Card";
+import Card from "../UIElements/Card";
 import React from "react";
 
 export interface PageDirectoryData {
@@ -17,21 +17,7 @@ export interface PageDirectoryData {
 }
 
 const PagesDirectory: React.FC<{ data: PageDirectoryData }> = ({ data }) => {
-  const cards: CardBaseProps[] = data.cards.map((card) => {
-    return {
-      _id: card._id,
-      title: card.title,
-      description: card.description,
-      mainImage: {
-        ...card.image,
-        asset: {
-          _ref: card.image.asset._id,
-          ...card.image.asset,
-        },
-      },
-      showButton: true,
-    };
-  });
+  let cards = data.cards;
 
   return (
     <section>
@@ -40,7 +26,9 @@ const PagesDirectory: React.FC<{ data: PageDirectoryData }> = ({ data }) => {
       </div>
       <div className="customGrid">
         {cards && cards.length > 0 ? (
-          cards.map((card) => <Card key={card._id} {...card} />)
+          cards.map((card) => (
+            <Card key={card._id} {...card} showButton={true} />
+          ))
         ) : (
           <div>No pages found.</div>
         )}
