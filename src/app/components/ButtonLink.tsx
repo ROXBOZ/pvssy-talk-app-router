@@ -1,20 +1,22 @@
 import Link from "next/link";
 
 function ButtonLink({
-  hasArrow = false,
-  label = "Button",
-  href = "#",
+  hasArrow,
+  label,
+  href,
+  color,
 }: {
-  hasArrow?: boolean;
-  label?: string;
-  href?: string;
+  hasArrow: boolean;
+  label: string;
+  href: string;
+  color: "violet" | "lime";
 }) {
   return (
     <Link
-      className="group flex w-fit items-center gap-2 rounded-full bg-violet-300 px-6 py-2 ring-violet-400 ring-inset hover:ring-2 hover:delay-200 hover:duration-200 active:bg-violet-400"
+      className={`group flex w-fit items-center gap-2 rounded-full ${color === "violet" ? "bg-violet-300 ring-violet-400 active:bg-violet-400" : "bg-lime-300 ring-lime-400 active:bg-lime-400"} px-6 py-2 font-semibold ring-inset hover:ring-2 hover:delay-200 hover:duration-200`}
       href={href}
     >
-      {label}
+      {label ? label : "Default Label"}
       {hasArrow && (
         <span className="transition-transform duration-300 group-hover:translate-x-1">
           →
