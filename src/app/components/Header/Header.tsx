@@ -1,6 +1,6 @@
 export const dynamic = "force-static";
 
-import HomeScreen from "./HomeScreen";
+import HomeScreen from "./HomeHero";
 import React from "react";
 import TopBar from "./TopBar";
 

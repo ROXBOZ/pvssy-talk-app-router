@@ -1,16 +1,16 @@
-import HeaderBar from "../Header/TopBar"; // client component
+import HeaderBar from "./TopBar"; // client component
 import { client } from "../../../../config/sanity";
 
 interface Tagline {
   tagline?: string;
 }
 
-const HomeScreen = async () => {
+const HomeHero = async () => {
   const data: Tagline | null = await getData();
   if (!data) return null;
 
   return (
-    <div className="flex h-[95vh] flex-col bg-violet-300">
+    <div className="bg-primary-300 flex h-[95vh] flex-col">
       <HeaderBar />
       <div className="flex flex-1 flex-col items-center justify-center p-4 lg:flex-row">
         <div className="flex-1">img</div>
@@ -22,9 +22,8 @@ const HomeScreen = async () => {
   );
 };
 
-export default HomeScreen;
+export default HomeHero;
 
-// Server-side fetch function
 async function getData(): Promise<Tagline | null> {
   try {
     return await client.fetch(

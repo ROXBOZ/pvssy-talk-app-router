@@ -21,7 +21,7 @@ function HeroSection() {
           <ButtonLink hasArrow={true} label="" href="" color="violet" />
         </div>
       </div>
-      <div className="col-span-6 col-start-1 w-full rounded-xl bg-violet-100 p-4 lg:col-span-3 lg:col-start-4">
+      <div className="bg-primary-100 col-span-6 col-start-1 w-full rounded-xl p-4 lg:col-span-3 lg:col-start-4">
         img
       </div>
     </div>
