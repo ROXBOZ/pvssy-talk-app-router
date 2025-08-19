@@ -11,7 +11,7 @@ const HomeHero = async () => {
   if (!data) return null;
 
   return (
-    <div className="bg-primary-300 flex h-screen flex-col">
+    <div className="from-primary-400 to-primary-300 flex h-screen flex-col bg-gradient-to-b">
       <HeaderBar />
       <div className="flex flex-1 flex-col items-center justify-center p-4 lg:flex-row">
         <div className="bg-tertiary-500/30 animation pvssy-size-pulse aspect-square h-full scale-70 rounded-full blur-3xl">
@@ -26,7 +26,8 @@ const HomeHero = async () => {
           label="Découvrir pvssy talk"
           href="#content"
           color="border"
-          hasArrow={false}
+          hasArrow={true}
+          arrowDirection="bottom"
         />
       </div>
     </div>

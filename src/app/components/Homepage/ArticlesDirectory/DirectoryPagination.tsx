@@ -20,6 +20,8 @@ const DirectoryPagination: React.FC<DirectoryPaginationProps> = ({
         color="border"
         onClick={() => setPage(Math.max(0, page - 1))}
         disabled={page === 0}
+        hasArrow={true}
+        arrowDirection="left"
       />
       <span>
         Page {page + 1} sur {totalPages}
@@ -29,6 +31,8 @@ const DirectoryPagination: React.FC<DirectoryPaginationProps> = ({
         color="border"
         onClick={() => setPage(Math.min(totalPages - 1, page + 1))}
         disabled={page === totalPages - 1}
+        hasArrow={true}
+        arrowDirection="right"
       />
     </div>
   );
