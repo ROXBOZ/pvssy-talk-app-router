@@ -1,9 +1,9 @@
-import Card from "../Card";
+import Card from "../UIElements/Card";
 import React from "react";
 
 function PagesDirectory() {
   return (
-    <div>
+    <section>
       <div className="p-4">
         <h2 className="font-heading text-3xl">Lorem Ipsum</h2>
       </div>
@@ -12,7 +12,7 @@ function PagesDirectory() {
         <Card showButton={true} />
         <Card showButton={true} />
       </div>
-    </div>
+    </section>
   );
 }
 

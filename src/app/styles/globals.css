@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./typography.css";
 @import "./grid.css";
+@import "./animation.css";
 
 @theme {
   --color-background: #fefdf4;
@@ -30,4 +31,8 @@ body {
 
 * {
   font-feature-settings: "ss11" !important;
+}
+
+section {
+  @apply px-4 lg:px-12;
 }

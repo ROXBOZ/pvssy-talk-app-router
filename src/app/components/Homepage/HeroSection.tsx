@@ -3,7 +3,7 @@ import React from "react";
 
 function HeroSection() {
   return (
-    <div className="customGrid h-[95vh]">
+    <section className="customGrid h-[95vh]">
       <div className="col-span-6 col-start-1 flex items-center lg:col-span-3">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
@@ -24,7 +24,7 @@ function HeroSection() {
       <div className="bg-primary-100 col-span-6 col-start-1 w-full rounded-xl p-4 lg:col-span-3 lg:col-start-4">
         img
       </div>
-    </div>
+    </section>
   );
 }
 
