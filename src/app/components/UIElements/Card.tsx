@@ -6,17 +6,27 @@ import { urlFor } from "../../../../config/sanity";
 export interface CardBaseProps {
   _id?: string;
   name?: string;
+  label?: string;
+  title?: string;
   mainImage?: {
-    asset: {
+    asset?: {
       _ref: string;
     };
+    [key: string]: unknown;
   };
   filters?: string[];
   href?: string;
   showButton: boolean;
+  [key: string]: unknown;
 }
 
-const Card: React.FC<CardBaseProps> = ({ name, mainImage, filters }) => {
+const Card: React.FC<CardBaseProps> = ({
+  name,
+  label,
+  title,
+  mainImage,
+  filters,
+}) => {
   const imageUrl =
     mainImage && mainImage.asset && mainImage.asset._ref
       ? urlFor(mainImage.asset._ref).url()
@@ -39,13 +49,15 @@ const Card: React.FC<CardBaseProps> = ({ name, mainImage, filters }) => {
       <div className="flex aspect-video items-center justify-center overflow-hidden bg-black">
         <div className="group-hover:opacity-80 group-hover:transition group-hover:delay-200 group-hover:duration-200">
           {imageUrl ? (
-            <Image
-              src={imageUrl}
-              width={800}
-              height={500}
-              alt={name || ""}
-              className="transition-transform delay-200 duration-200 group-hover:scale-[102%]"
-            />
+            <div className="bg-primary-200">
+              <Image
+                src={imageUrl}
+                width={800}
+                height={500}
+                alt={name || ""}
+                className="transition-transform delay-200 duration-200 group-hover:scale-[102%]"
+              />
+            </div>
           ) : (
             <div className="flex h-full w-full items-center justify-center bg-gray-200 text-gray-500">
               No image
@@ -56,9 +68,16 @@ const Card: React.FC<CardBaseProps> = ({ name, mainImage, filters }) => {
       <div className="flex flex-col p-4">
         <div className="flex items-baseline justify-between gap-2">
           <div>
-            <h3 className="font-heading text-xl">{name || "Sans titre"}</h3>
+            <h3 className="font-heading text-xl">
+              {name || title || "Sans titre"}
+            </h3>
           </div>
-          <ButtonLink hasArrow={true} label="Lire" href="" color="primary" />
+          <ButtonLink
+            hasArrow={true}
+            label={label || "Lire"}
+            href=""
+            color="primary"
+          />
         </div>
       </div>
     </div>
