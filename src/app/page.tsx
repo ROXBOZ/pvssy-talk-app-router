@@ -2,7 +2,7 @@ import ArticlesDirectory from "./components/Homepage/ArticlesDirectory/ArticlesD
 import HeroSection from "./components/Homepage/HeroSection/HeroSection";
 import PagesDirectory from "./components/Homepage/PagesDirectory";
 import React from "react";
-import Stats from "./components/Homepage/Stats";
+import Stats from "./components/Homepage/Stats/Stats";
 import { client } from "../../config/sanity";
 
 interface HomeContent {
