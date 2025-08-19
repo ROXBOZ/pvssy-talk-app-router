@@ -1,6 +1,6 @@
 export const dynamic = "force-static";
 
-import ButtonLink from "../ButtonLink";
+import ButtonLink from "../UIElements/ButtonLink";
 import React from "react";
 import { client } from "../../../../config/sanity";
 
@@ -29,7 +29,7 @@ export default async function Stats() {
             label={data.callToAction.label}
             href={`/${data.callToAction.link?.slug?.current ?? ""}`}
             hasArrow={true}
-            color="violet"
+            color="primary"
           />
         )}
       </div>

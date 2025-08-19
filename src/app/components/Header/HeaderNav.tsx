@@ -1,6 +1,6 @@
 export const dynamic = "force-static";
 
-import ButtonLink from "../ButtonLink";
+import ButtonLink from "../UIElements/ButtonLink";
 import React from "react";
 
 interface HeaderNavProps {
@@ -27,7 +27,12 @@ const HeaderNav = ({ headerMenu }: HeaderNavProps) => {
             ))}
         </ul>
       )}
-      <ButtonLink color="lime" href="" label="Participer" hasArrow={false} />
+      <ButtonLink
+        color="secondary"
+        href=""
+        label="Participer"
+        hasArrow={false}
+      />
     </nav>
   );
 };

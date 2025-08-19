@@ -5,7 +5,7 @@ import Stats from "./components/Homepage/Stats";
 
 export default async function Home() {
   return (
-    <div className="flex flex-col gap-48">
+    <div id="content" className="flex flex-col gap-48">
       <Stats />
       <ArticlesDirectory />
       <HeroSection />

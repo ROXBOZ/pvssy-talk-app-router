@@ -1,4 +1,4 @@
-import ButtonLink from "../ButtonLink";
+import ButtonLink from "./ButtonLink";
 import Image from "next/image";
 import React from "react";
 import { urlFor } from "../../../../config/sanity";
@@ -56,7 +56,7 @@ const Card: React.FC<CardBaseProps> = ({ name, mainImage, filters }) => {
           <div>
             <h3 className="font-heading text-xl">{name || "No Title"}</h3>
           </div>
-          <ButtonLink hasArrow={true} label="Lire" href="" color="violet" />
+          <ButtonLink hasArrow={true} label="Lire" href="" color="primary" />
         </div>
       </div>
     </div>

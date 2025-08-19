@@ -1,3 +1,4 @@
+import ButtonLink from "../UIElements/ButtonLink";
 import HeaderBar from "./TopBar"; // client component
 import { client } from "../../../../config/sanity";
 
@@ -10,7 +11,7 @@ const HomeHero = async () => {
   if (!data) return null;
 
   return (
-    <div className="bg-primary-300 flex h-[95vh] flex-col">
+    <div className="bg-primary-300 flex h-screen flex-col">
       <HeaderBar />
       <div className="flex flex-1 flex-col items-center justify-center p-4 lg:flex-row">
         <div className="bg-tertiary-500/30 animation pvssy-size-pulse aspect-square h-full scale-70 rounded-full blur-3xl">
@@ -19,6 +20,14 @@ const HomeHero = async () => {
         <h1 className="font-heading flex-1 text-6xl lg:text-8xl">
           {data.tagline}
         </h1>
+      </div>
+      <div className="darker flex justify-center p-4">
+        <ButtonLink
+          label="Découvrir pvssy talk"
+          href="#content"
+          color="border"
+          hasArrow={false}
+        />
       </div>
     </div>
   );

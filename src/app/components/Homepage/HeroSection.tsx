@@ -1,4 +1,4 @@
-import ButtonLink from "../ButtonLink";
+import ButtonLink from "../UIElements/ButtonLink";
 import React from "react";
 
 function HeroSection() {
@@ -18,7 +18,7 @@ function HeroSection() {
               illo perspiciatis!
             </p>
           </div>
-          <ButtonLink hasArrow={true} label="" href="" color="violet" />
+          <ButtonLink hasArrow={true} label="" href="" color="primary" />
         </div>
       </div>
       <div className="bg-primary-100 col-span-6 col-start-1 w-full rounded-xl p-4 lg:col-span-3 lg:col-start-4">
