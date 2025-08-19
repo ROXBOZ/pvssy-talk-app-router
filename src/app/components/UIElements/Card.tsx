@@ -23,7 +23,7 @@ const Card: React.FC<CardBaseProps> = ({ name, mainImage, filters }) => {
       : null;
 
   return (
-    <div className="border-primary-100 group hover:bg-primary-100 col-span-6 w-full overflow-hidden rounded-2xl border-2 bg-neutral-50 transition-colors duration-200 hover:cursor-pointer lg:col-span-2">
+    <div className="border-primary-100 group hover:bg-primary-100 bg-background col-span-6 w-full overflow-hidden rounded-2xl border-2 transition-colors duration-200 hover:cursor-pointer lg:col-span-2">
       {filters && filters.length > 0 && (
         <div className="absolute z-20 flex flex-wrap gap-1 p-2 text-sm">
           {filters.map((filter, idx) => (
