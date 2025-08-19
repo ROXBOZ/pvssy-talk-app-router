@@ -17,7 +17,7 @@ interface HeaderNavProps {
 
 const HeaderNav = ({ headerMenu }: HeaderNavProps) => {
   return (
-    <nav className="col-start-4 col-end-7 flex items-baseline justify-between p-4">
+    <nav className="col-start-4 col-end-7 flex items-baseline justify-between">
       {headerMenu && (
         <ul className="flex gap-24">
           {headerMenu
