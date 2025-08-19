@@ -1,18 +1,71 @@
 import ButtonLink from "./ButtonLink";
+import Image from "next/image";
 import React from "react";
+import { urlFor } from "../../../config/sanity";
 
-function Card({ showButton }: { showButton: boolean }) {
+export interface CardBaseProps {
+  _id: string;
+  name: string;
+  mainImage: {
+    asset: {
+      _ref: string;
+    };
+  };
+  filters?: string[];
+  href?: string;
+  showButton?: boolean;
+}
+
+const Card: React.FC<CardBaseProps> = ({ name, mainImage, filters }) => {
+  const imageUrl =
+    mainImage && mainImage.asset && mainImage.asset._ref
+      ? urlFor(mainImage.asset._ref).url()
+      : null;
+
   return (
-    <div className="col-span-2 w-full overflow-hidden rounded-2xl border-2 border-violet-100 bg-neutral-50">
-      <div className="aspect-video p-4">img</div>
-      <div className="flex items-baseline justify-between gap-4 p-4">
-        <h3 className="font-heading text-xl">Title</h3>
-        {showButton && (
-          <ButtonLink hasArrow={true} label="" href="" color="violet" />
+    <div className="border-primary-100 group hover:bg-primary-100 col-span-2 w-full overflow-hidden rounded-2xl border-2 bg-neutral-50 transition-colors duration-300 hover:cursor-pointer">
+      <div className="flex aspect-video items-center justify-center overflow-hidden">
+        {imageUrl ? (
+          <Image
+            src={imageUrl}
+            width={800}
+            height={500}
+            alt={name}
+            className="transition-transform delay-200 duration-400 group-hover:scale-[102%]"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-gray-200 text-gray-500">
+            No image
+          </div>
         )}
+      </div>
+      <div className="flex flex-col p-4">
+        <div className="flex justify-between">
+          <div>
+            <h3 className="font-heading text-xl">{name}</h3>
+            {filters && filters.length > 0 && (
+              <div className="flex flex-wrap gap-1 text-sm">
+                {filters.map((filter, idx) => (
+                  <span
+                    key={idx}
+                    className="text-primary-800 bg-primary-100 group-hover:bg-primary-200 rounded px-2 py-1 font-semibold"
+                  >
+                    {filter}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+          <ButtonLink
+            hasArrow={true}
+            label="En savoir plus"
+            href=""
+            color="violet"
+          />
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default Card;
