@@ -1,9 +1,35 @@
+export const dynamic = "force-static";
+
+import ButtonLink from "../ButtonLink";
 import React from "react";
 
-function HeaderNav() {
-  return (
-    <div className="col-start-4 col-end-7 bg-violet-400 p-4">HeaderNav</div>
-  );
+interface HeaderNavProps {
+  headerMenu?: {
+    _type: string;
+    title?: string;
+    link?: string;
+    isAction?: boolean;
+    content?: {
+      pages?: { title: string; slug: { current: string } }[];
+    };
+  }[];
 }
+
+const HeaderNav = ({ headerMenu }: HeaderNavProps) => {
+  return (
+    <nav className="col-start-4 col-end-7 flex items-baseline justify-between p-4">
+      {headerMenu && (
+        <ul className="flex gap-24">
+          {headerMenu
+            .filter((item) => item.title)
+            .map((item, idx) => (
+              <li key={idx}>{item.title}</li>
+            ))}
+        </ul>
+      )}
+      <ButtonLink color="lime" href="" label="Participer" hasArrow={false} />
+    </nav>
+  );
+};
 
 export default HeaderNav;
