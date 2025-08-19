@@ -2,8 +2,8 @@ import "@testing-library/jest-dom";
 
 import { fireEvent, render } from "@testing-library/react";
 
-import ButtonLink from "./ButtonLink";
 import React from "react";
+import ButtonLink from "./ButtonLink";
 
 describe("ButtonLink", () => {
   it("renders as a button when no href is provided", () => {
