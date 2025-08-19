@@ -1,16 +1,16 @@
 import ArticlesDirectory from "./components/Homepage/ArticlesDirectory/ArticlesDirectory";
-import PageSuggestionScreen from "./components/Homepage/PageSuggestionScreen";
+import HeroSection from "./components/Homepage/HeroSection";
 import PagesDirectory from "./components/Homepage/PagesDirectory";
-import StatsScreen from "./components/Homepage/StatsScreen";
+import Stats from "./components/Homepage/Stats";
 
 export default async function Home() {
   return (
     <div className="flex flex-col gap-48">
-      <StatsScreen />
+      <Stats />
       <ArticlesDirectory />
-      <PageSuggestionScreen />
+      <HeroSection />
       <PagesDirectory />
-      <PageSuggestionScreen />
+      <HeroSection />
       <PagesDirectory />
     </div>
   );

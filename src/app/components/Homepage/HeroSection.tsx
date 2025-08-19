@@ -1,8 +1,7 @@
 import ButtonLink from "../ButtonLink";
-import Link from "next/link";
 import React from "react";
 
-function PageSuggestionScreen() {
+function HeroSection() {
   return (
     <div className="customGrid h-[95vh]">
       <div className="col-span-6 col-start-1 flex items-center lg:col-span-3">
@@ -29,4 +28,4 @@ function PageSuggestionScreen() {
   );
 }
 
-export default PageSuggestionScreen;
+export default HeroSection;

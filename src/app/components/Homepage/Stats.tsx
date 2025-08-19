@@ -16,7 +16,7 @@ interface Stats {
   };
 }
 
-export default async function StatsScreen() {
+export default async function Stats() {
   const data: Stats | null = await getData();
   if (!data) return null;
 
