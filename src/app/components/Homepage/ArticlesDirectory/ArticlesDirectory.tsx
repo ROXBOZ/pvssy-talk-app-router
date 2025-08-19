@@ -8,7 +8,7 @@ import { client } from "../../../../../config/sanity";
 
 interface ArticleCardProps extends CardBaseProps {}
 
-const ArticlesDirectory = () => {
+const ArticlesDirectory = ({ item }: any) => {
   const [articles, setArticles] = useState<ArticleCardProps[] | null>(null);
   const [selectedFilter, setSelectedFilter] = useState<string | null>(null);
 
@@ -26,7 +26,6 @@ const ArticlesDirectory = () => {
     ),
   ];
 
-  // Filter articles by selectedFilter
   const filteredArticles = selectedFilter
     ? articles.filter((article) =>
         Array.isArray(article.filters)
