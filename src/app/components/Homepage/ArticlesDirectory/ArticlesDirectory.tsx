@@ -31,7 +31,7 @@ const ArticlesDirectory = () => {
     ? articles.filter((article) =>
         Array.isArray(article.filters)
           ? article.filters.includes(selectedFilter)
-          : false
+          : false,
       )
     : articles;
 
