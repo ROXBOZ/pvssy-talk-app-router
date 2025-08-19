@@ -20,17 +20,20 @@ const Filter: React.FC<FilterProps> = ({
   };
 
   return (
-    <div className="font-heading *: flex items-baseline gap-2 *:rounded-full *:border-2 *:px-4 *:py-1 *:hover:cursor-pointer">
+    <div className="font-heading flex items-baseline gap-2">
       {filterOptions.map((filter, index) => (
         <span
           key={index}
           onClick={() => handleFilter(filter)}
-          className={`border-tertiary-400 font-heading hover:bg-tertiary-400 hover:border-tertiary-400 flex cursor-pointer items-baseline gap-2 rounded-full border-2 px-4 py-1 transition-all delay-200 duration-200 ${selectedFilter === filter && "bg-tertiary-500"} `}
+          className={`border-tertiary-400 font-heading hover:bg-tertiary-400 hover:border-tertiary-400 relative z-10 flex cursor-pointer items-baseline gap-2 rounded-full border-2 px-4 py-1 blur-none transition-all delay-200 duration-200 ${selectedFilter === filter ? "bg-tertiary-500" : ""}`}
         >
           {filter}
         </span>
       ))}
-      <span className="border-primary-100" onClick={handleReset}>
+      <span
+        className="border-primary-100 cursor-pointer rounded-full border-2 px-4 py-1"
+        onClick={handleReset}
+      >
         ✕ reset
       </span>
     </div>
