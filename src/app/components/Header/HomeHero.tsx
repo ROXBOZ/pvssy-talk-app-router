@@ -13,7 +13,9 @@ const HomeHero = async () => {
     <div className="bg-primary-300 flex h-[95vh] flex-col">
       <HeaderBar />
       <div className="flex flex-1 flex-col items-center justify-center p-4 lg:flex-row">
-        <div className="flex-1">img</div>
+        <div className="bg-tertiary-500/30 animation pvssy-size-pulse aspect-square h-full scale-70 rounded-full blur-3xl">
+          <div className="animation pvssy-size-pulse bg-tertiary-600 aspect-square h-full scale-70 rounded-full blur-3xl"></div>
+        </div>
         <h1 className="font-heading flex-1 text-6xl lg:text-8xl">
           {data.tagline}
         </h1>
