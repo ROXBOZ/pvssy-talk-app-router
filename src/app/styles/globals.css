@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./typography.css";
+@import "./grid.css";
 
 body {
   @apply bg-violet-50 text-violet-950;
@@ -7,8 +8,4 @@ body {
 
 * {
   font-feature-settings: "ss11" !important;
-}
-
-.customGrid {
-  @apply grid grid-cols-2 gap-4 p-4 md:grid-cols-3 lg:grid-cols-6;
 }
