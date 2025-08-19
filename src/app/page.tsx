@@ -1,6 +1,10 @@
 import ArticlesDirectory from "./components/Homepage/ArticlesDirectory/ArticlesDirectory";
-import HeroSection from "./components/Homepage/HeroSection/HeroSection";
-import PagesDirectory from "./components/Homepage/PagesDirectory";
+import HeroSection, {
+  HeroBlockData,
+} from "./components/Homepage/HeroSection/HeroSection";
+import PagesDirectory, {
+  PageDirectoryData,
+} from "./components/Homepage/PagesDirectory";
 import React from "react";
 import Stats from "./components/Homepage/Stats/Stats";
 import { client } from "../../config/sanity";
@@ -8,17 +12,6 @@ import { client } from "../../config/sanity";
 interface HomeContent {
   _type: string;
   [key: string]: unknown;
-}
-
-interface HeroBlockData {
-  title: string;
-  text: string;
-  buttonLabel?: string;
-  buttonHref?: string;
-  image?: {
-    asset: { _ref: string };
-    alt?: string;
-  };
 }
 
 export default async function Home() {
@@ -34,7 +27,12 @@ export default async function Home() {
               case "dotsZone":
                 return <Stats key={index} />;
               case "linkCards":
-                return <PagesDirectory key={index} />;
+                return (
+                  <PagesDirectory
+                    key={index}
+                    data={item as unknown as PageDirectoryData}
+                  />
+                );
               case "painsBlock":
                 return <ArticlesDirectory key={index} />;
               case "textImageBlock":
