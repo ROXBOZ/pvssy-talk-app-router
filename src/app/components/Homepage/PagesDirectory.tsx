@@ -7,17 +7,51 @@ export interface PageDirectoryData {
     _id: string;
     title: string;
     description: string;
-    image: {
-      asset: {
-        _id: string;
-        url: string;
+    image?: {
+      asset?: {
+        _id?: string;
+        _ref?: string;
+        url?: string;
+      };
+      url?: string;
+    };
+    mainImage?: {
+      asset?: {
+        _id?: string;
+        _ref?: string;
+        url?: string;
+      };
+      url?: string;
+    };
+    figure?: {
+      image?: {
+        asset?: {
+          _id?: string;
+          _ref?: string;
+          url?: string;
+        };
+        url?: string;
       };
     };
+    [key: string]: unknown;
   }>;
 }
 
 const PagesDirectory: React.FC<{ data: PageDirectoryData }> = ({ data }) => {
-  let cards = data.cards;
+  const cards = data.cards.map((card) => {
+    if (!card.mainImage && card.figure?.image) {
+      return {
+        ...card,
+        mainImage: card.figure.image,
+      };
+    } else if (!card.mainImage && card.image) {
+      return {
+        ...card,
+        mainImage: card.image,
+      };
+    }
+    return card;
+  });
 
   return (
     <section>

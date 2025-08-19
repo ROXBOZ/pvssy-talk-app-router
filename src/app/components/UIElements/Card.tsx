@@ -10,8 +10,11 @@ export interface CardBaseProps {
   title?: string;
   mainImage?: {
     asset?: {
-      _ref: string;
+      _ref?: string;
+      _id?: string;
+      url?: string;
     };
+    url?: string;
     [key: string]: unknown;
   };
   filters?: string[];
