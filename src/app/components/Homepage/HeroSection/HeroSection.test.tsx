@@ -1,3 +1,12 @@
+// Mock config/sanity.ts to provide urlFor for HeroImage
+jest.mock("../../../../../config/sanity", () => ({
+  __esModule: true,
+  urlFor: () => ({ url: () => "/mocked-image-url.jpg" }),
+}));
+// Mock @sanity/image-url to avoid ESM import issues in Jest
+jest.mock("@sanity/image-url", () => () => ({
+  url: () => "/mocked-image-url.jpg",
+}));
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import HeroSection, { HeroBlockData } from "./HeroSection";
@@ -12,7 +21,7 @@ const baseData: HeroBlockData = {
   figure: {
     altText: "Test alt",
     image: {
-      asset: { _ref: "image-abc123" },
+      asset: { _ref: "image-Tb9Ew8CXIwaY6R1kjMvI0uRR-2000x3000-jpg" },
       alt: "Image alt",
     },
   },
