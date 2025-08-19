@@ -2,10 +2,11 @@ import React from "react";
 import HeroImage from "./HeroImage";
 import HeroText from "./HeroText";
 import HeroButton from "./HeroButton";
+import { PortableTextBlock } from "@portabletext/react";
 
 export interface HeroBlockData {
   title: string;
-  text: string | any[];
+  text: string | PortableTextBlock[];
   figure?: {
     altText?: string;
     image?: {

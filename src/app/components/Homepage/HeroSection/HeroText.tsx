@@ -1,8 +1,8 @@
 import React from "react";
-import { PortableText } from "@portabletext/react";
+import { PortableText, PortableTextBlock } from "@portabletext/react";
 
 interface HeroTextProps {
-  text: string | any[];
+  text: string | PortableTextBlock[];
 }
 
 const HeroText: React.FC<HeroTextProps> = ({ text }) => {
