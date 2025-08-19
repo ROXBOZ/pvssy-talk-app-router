@@ -2,6 +2,21 @@
 @import "./typography.css";
 @import "./grid.css";
 
+@theme {
+  --color-violet-50: #fbf4ff;
+  --color-violet-100: #f6e7ff;
+  --color-violet-200: #eeceff;
+  --color-violet-300: #e09cff;
+  --color-violet-400: #d474fe;
+  --color-violet-500: #c040f5;
+  --color-violet-950: #3f0151;
+
+  --color-lime-100: #eaffc8;
+  --color-lime-200: #ddffab;
+  --color-lime-300: #b7fb5b;
+  --color-lime-400: #9bf229;
+}
+
 body {
   @apply bg-violet-50 text-violet-950;
 }
