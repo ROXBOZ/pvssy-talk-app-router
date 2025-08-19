@@ -21,7 +21,7 @@ export default async function Stats() {
   if (!data) return null;
 
   return (
-    <div className="customGrid bg-primary-100 h-[95vh] items-center justify-center">
+    <div className="customGrid bg-primary-100 h-[90vh] items-center justify-center lg:h-[60vh]">
       <div className="col-start-1 col-end-7 flex flex-col items-center gap-4 text-center lg:col-start-3 lg:col-end-5">
         {data.text && <p className="font-heading text-2xl">{data.text}</p>}
         {data.callToAction?.label && (
