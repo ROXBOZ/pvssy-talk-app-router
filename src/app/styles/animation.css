@@ -1,0 +1,39 @@
+.home-hero__gradient {
+  background: radial-gradient(circle, #ff4a23 0%, transparent 30%);
+  animation: gradientAnimation 4s infinite alternate;
+  height: 100%;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-size: 100%;
+    background-position: center;
+  }
+  100% {
+    background-size: 300%;
+    background-position: center;
+  }
+}
+.button--glow:hover {
+  background-color: rgb(255, 199.8772727273, 188);
+}
+
+.button--glow:active {
+  background-color: rgb(255, 157.9181818182, 137);
+}
+
+.button--glow.active {
+  background-color: rgb(255, 115.9590909091, 86);
+  animation: glow 8s infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px 2px #ff4b24, 0 0 100px 60px #e09cff;
+    mix-blend-mode: multiply;
+  }
+  50%, 75% {
+    box-shadow: 0 0 20px 10px #ff4b24, 0 0 50px 30px #e09cff;
+    mix-blend-mode: multiply;
+  }
+}/*# sourceMappingURL=animation.css.map */

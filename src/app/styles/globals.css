@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "./typography.css";
 @import "./grid.css";
-@import "./animation.css";
+@import "./animation.scss";
 
 @theme {
   --color-background: #fefdf4;

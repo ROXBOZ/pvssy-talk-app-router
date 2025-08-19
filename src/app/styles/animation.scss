@@ -1,0 +1,58 @@
+/* $violet: #e09cff;
+$orange: #f02b00;
+
+$glow-sm:
+  0 0 5px 2px lighten($orange, 10),
+  0 0 100px 60px $violet;
+$glow-lg:
+  0 0 20px 10px lighten($orange, 10),
+  0 0 50px 30px $violet; */
+
+.home-hero__gradient {
+  background: radial-gradient(circle, #ff4a23 0%, transparent 30%);
+  animation: gradientAnimation 4s infinite alternate;
+  height: 100%;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-size: 100%;
+    background-position: center;
+  }
+
+  100% {
+    background-size: 300%;
+    background-position: center;
+  }
+}
+
+.button--glow:hover {
+  background-color: lighten($primary, 30);
+}
+
+.button--glow:active {
+  background-color: lighten($primary, 20);
+}
+
+.button--glow.active {
+  border: solid 1py lighten($primary, 10);
+  background-color: lighten($primary, 10);
+  animation: glow 8s infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 5px 2px #ff4b24,
+      0 0 100px 60px #e09cff;
+    mix-blend-mode: multiply;
+  }
+  50%,
+  75% {
+    box-shadow:
+      0 0 20px 10px #ff4b24,
+      0 0 50px 30px #e09cff;
+    mix-blend-mode: multiply;
+  }
+}
