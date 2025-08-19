@@ -1,15 +1,15 @@
-"use client";
+export const dynamic = "force-static";
 
 import HomeScreen from "./HomeScreen";
 import React from "react";
 import TopBar from "./TopBar";
-import { usePathname } from "next/navigation";
 
-function Header() {
-  const pathname = usePathname();
-  const isHome = pathname === "/";
-
-  return <>{isHome ? <HomeScreen /> : <TopBar />}</>;
+interface HeaderProps {
+  isHome: boolean;
 }
+
+const Header = ({ isHome }: HeaderProps) => {
+  return isHome ? <HomeScreen /> : <TopBar />;
+};
 
 export default Header;
