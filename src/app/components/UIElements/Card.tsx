@@ -5,7 +5,7 @@ import { urlFor } from "../../../../config/sanity";
 
 export interface CardBaseProps {
   _id?: string;
-  name: string;
+  name?: string;
   mainImage?: {
     asset: {
       _ref: string;
@@ -54,7 +54,7 @@ const Card: React.FC<CardBaseProps> = ({ name, mainImage, filters }) => {
       <div className="flex flex-col p-4">
         <div className="flex items-baseline justify-between gap-2">
           <div>
-            <h3 className="font-heading text-xl">{name || "No Title"}</h3>
+            <h3 className="font-heading text-xl">{name || "Sans titre"}</h3>
           </div>
           <ButtonLink hasArrow={true} label="Lire" href="" color="primary" />
         </div>

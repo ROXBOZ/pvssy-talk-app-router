@@ -7,10 +7,9 @@ import ArticlesHeading from "./ArticlesHeading";
 import DirectoryPagination from "./DirectoryPagination";
 import { client } from "../../../../../config/sanity";
 
-interface ArticleCardProps extends CardBaseProps {}
-
 const ArticlesDirectory = () => {
-  const [articles, setArticles] = useState<ArticleCardProps[] | null>(null);
+  const articlesGridRef = React.useRef<HTMLDivElement>(null);
+  const [articles, setArticles] = useState<CardBaseProps[] | null>(null);
   const [selectedFilter, setSelectedFilter] = useState<string | null>(null);
   const [page, setPage] = useState(0);
   const PAGE_SIZE = 6;
@@ -38,6 +37,17 @@ const ArticlesDirectory = () => {
     : articles;
 
   const totalPages = Math.ceil(filteredArticles.length / PAGE_SIZE);
+
+  const handlePageChange = (newPage: number) => {
+    setPage(newPage);
+    setTimeout(() => {
+      articlesGridRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 0);
+  };
+
   const paginatedArticles = filteredArticles.slice(
     page * PAGE_SIZE,
     page * PAGE_SIZE + PAGE_SIZE,
@@ -51,7 +61,7 @@ const ArticlesDirectory = () => {
         setSelectedFilter={setSelectedFilter}
       />
 
-      <div className="customGrid">
+      <div ref={articlesGridRef} className="customGrid">
         {paginatedArticles.map((article) => (
           <Card key={article._id} {...article} />
         ))}
@@ -60,7 +70,7 @@ const ArticlesDirectory = () => {
       <DirectoryPagination
         page={page}
         totalPages={totalPages}
-        setPage={setPage}
+        setPage={handlePageChange}
       />
     </section>
   );
@@ -68,7 +78,7 @@ const ArticlesDirectory = () => {
 
 export default ArticlesDirectory;
 
-async function getArticles(): Promise<ArticleCardProps[] | null> {
+async function getArticles(): Promise<CardBaseProps[] | null> {
   try {
     return await client.fetch(
       '*[_type == "pain" && !(_id in path("drafts.**"))] {..., filters}',

@@ -2,6 +2,7 @@
 
 import Filter from "./ArticleFilters";
 import { PortableText } from "@portabletext/react";
+import type { PortableTextBlock } from "@portabletext/types";
 import React from "react";
 import { useSanityFetch } from "@/app/hooks/useSanityFetch";
 
@@ -13,7 +14,7 @@ interface ArticlesHeadingProps {
 
 interface HeadingData {
   title: string;
-  text: any;
+  text: PortableTextBlock[];
 }
 
 const ArticlesHeading: React.FC<ArticlesHeadingProps> = ({
@@ -23,8 +24,32 @@ const ArticlesHeading: React.FC<ArticlesHeadingProps> = ({
 }) => {
   const heading = useSanityFetch<HeadingData>(
     `*[_type == "homepage" && !(_id in path("drafts.**"))][0]{content[]{..., _type, title, text}}`,
-    (data) =>
-      data?.content?.find((item: any) => item._type === "painsBlock") ?? null,
+    (data: unknown) => {
+      if (
+        data &&
+        typeof data === "object" &&
+        "content" in data &&
+        Array.isArray((data as Record<string, unknown>).content)
+      ) {
+        const contentArr = (data as { content: unknown[] }).content;
+        const block = contentArr.find(
+          (item): item is HeadingData & { _type: string } =>
+            !!item &&
+            typeof item === "object" &&
+            (item as Record<string, unknown>)._type === "painsBlock" &&
+            typeof (item as Record<string, unknown>).title === "string" &&
+            Array.isArray((item as Record<string, unknown>).text),
+        );
+        if (block) {
+          return {
+            title: block.title,
+            text: block.text,
+          };
+        }
+        return null;
+      }
+      return null;
+    },
   );
   if (!heading) return null;
 

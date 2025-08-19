@@ -4,7 +4,7 @@ import { client } from "../../../config/sanity";
 
 export function useSanityFetch<T>(
   query: string,
-  pick: (data: any) => T | null,
+  pick: (data: unknown) => T | null,
 ) {
   const [data, setData] = useState<T | null>(null);
 
