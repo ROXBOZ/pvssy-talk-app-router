@@ -1,6 +1,4 @@
-export const dynamic = "force-static";
-
-import HeaderBar from "../Header/TopBar";
+import HeaderBar from "../Header/TopBar"; // client component
 import { client } from "../../../../config/sanity";
 
 interface Tagline {
@@ -26,6 +24,7 @@ const HomeScreen = async () => {
 
 export default HomeScreen;
 
+// Server-side fetch function
 async function getData(): Promise<Tagline | null> {
   try {
     return await client.fetch(
