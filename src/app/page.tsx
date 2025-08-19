@@ -1,5 +1,5 @@
 import ArticlesDirectory from "./components/Homepage/ArticlesDirectory/ArticlesDirectory";
-import HeroSection from "./components/Homepage/HeroSection";
+import HeroSection from "./components/Homepage/HeroSection/HeroSection";
 import PagesDirectory from "./components/Homepage/PagesDirectory";
 import React from "react";
 import Stats from "./components/Homepage/Stats";
