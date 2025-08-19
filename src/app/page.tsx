@@ -10,6 +10,17 @@ interface HomeContent {
   [key: string]: unknown;
 }
 
+interface HeroBlockData {
+  title: string;
+  text: string;
+  buttonLabel?: string;
+  buttonHref?: string;
+  image?: {
+    asset: { _ref: string };
+    alt?: string;
+  };
+}
+
 export default async function Home() {
   const data = await getData();
   const content = data?.content || [];
@@ -27,7 +38,12 @@ export default async function Home() {
               case "painsBlock":
                 return <ArticlesDirectory key={index} />;
               case "textImageBlock":
-                return <HeroSection key={index} />;
+                return (
+                  <HeroSection
+                    key={index}
+                    data={item as unknown as HeroBlockData}
+                  />
+                );
               default:
                 return null;
             }
@@ -45,7 +61,22 @@ interface HomepageData {
 async function getData(): Promise<HomepageData | null> {
   try {
     return await client.fetch(
-      '*[_type == "homepage" && !(_id in path("drafts.**"))][0]{content[]{...}}',
+      `*[_type == "homepage" && !(_id in path("drafts.**"))][0]{
+        content[]{
+          ...,
+          callToAction{
+            ...,
+            linkRef->{_id, _type, title, slug}
+          },
+          figure{
+            ...,
+            image{
+              ...,
+              asset->
+            }
+          }
+        }
+      }`,
     );
   } catch (error) {
     console.error("Error fetching tagline:", error);
