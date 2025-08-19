@@ -29,6 +29,7 @@ export default async function StatsScreen() {
             label={data.callToAction.label}
             href={`/${data.callToAction.link?.slug?.current ?? ""}`}
             hasArrow={true}
+            color="violet"
           />
         )}
       </div>
