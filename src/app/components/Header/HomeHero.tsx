@@ -13,7 +13,7 @@ const HomeHero = async () => {
   return (
     <div className="from-primary-400 to-primary-300 flex h-screen flex-col bg-gradient-to-b">
       <HeaderBar />
-      <div className="customGrid flex-1 flex-col items-center justify-center p-4 lg:flex-row">
+      <div className="lg:customGrid flex flex-1 flex-col items-center justify-center p-4 lg:flex-row">
         <div className="bg-tertiary-500/30 animation pvssy-size-pulse aspect-square h-full scale-70 rounded-full blur-3xl">
           <div className="animation pvssy-size-pulse bg-tertiary-600 aspect-square h-full scale-70 rounded-full blur-3xl"></div>
         </div>

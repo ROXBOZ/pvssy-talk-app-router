@@ -20,7 +20,7 @@ const Filter: React.FC<FilterProps> = ({
   };
 
   return (
-    <div className="font-heading flex items-baseline gap-2">
+    <div className="font-heading flex flex-wrap items-baseline gap-2">
       {filterOptions.map((filter, index) => (
         <span
           key={index}

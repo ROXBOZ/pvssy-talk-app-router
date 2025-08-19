@@ -32,9 +32,9 @@ const HeroSection: React.FC<{ data: HeroBlockData }> = ({ data }) => {
 
   const { callToAction, figure, title, text } = data;
   return (
-    <section className="customGrid bg-primary-950/5 h-[95vh] py-8">
+    <section className="customGrid bg-primary-100 py-16 lg:py-0">
       <div className="col-span-6 col-start-1 flex items-center lg:col-span-3">
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4 md:gap-8">
           <div className="flex flex-col gap-4">
             <h2 className="font-heading text-3xl">{title}</h2>
             <HeroText text={text} />
@@ -42,7 +42,7 @@ const HeroSection: React.FC<{ data: HeroBlockData }> = ({ data }) => {
           <HeroButton callToAction={callToAction} />
         </div>
       </div>
-      <div className="bg-background col-span-6 col-start-1 w-full rounded-xl p-4 lg:col-span-3 lg:col-start-4">
+      <div className="col-span-6 col-start-1 h-auto w-full lg:col-span-2 lg:col-start-5">
         <HeroImage figure={figure} title={title} />
       </div>
     </section>

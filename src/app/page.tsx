@@ -26,7 +26,7 @@ export default async function Home() {
   const content = data?.content || [];
 
   return (
-    <div id="content" className="flex flex-col gap-48">
+    <div id="content" className="flex flex-col gap-24">
       {content &&
         content.map((item: HomeContent, index: number) => {
           if (item && item._type) {
