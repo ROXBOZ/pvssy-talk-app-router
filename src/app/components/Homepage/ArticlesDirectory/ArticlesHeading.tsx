@@ -10,6 +10,7 @@ interface ArticlesHeadingProps {
   filters: string[];
   selectedFilter: string | null;
   setSelectedFilter: React.Dispatch<React.SetStateAction<string | null>>;
+  h2Ref?: React.RefObject<HTMLHeadingElement>;
 }
 
 interface HeadingData {
@@ -21,6 +22,7 @@ const ArticlesHeading: React.FC<ArticlesHeadingProps> = ({
   filters,
   selectedFilter,
   setSelectedFilter,
+  h2Ref,
 }) => {
   const heading = useSanityFetch<HeadingData>(
     `*[_type == "homepage" && !(_id in path("drafts.**"))][0]{content[]{..., _type, title, text}}`,
@@ -56,7 +58,9 @@ const ArticlesHeading: React.FC<ArticlesHeadingProps> = ({
   return (
     <div className="customGrid items-baseline py-8">
       <div className="col-start-1 col-end-6 lg:col-end-3">
-        <h2 className="font-heading text-3xl">{heading.title}</h2>
+        <h2 ref={h2Ref} className="font-heading text-3xl">
+          {heading.title}
+        </h2>
       </div>
       <div className="col-start-1 col-end-6 flex flex-col gap-4 lg:col-start-3">
         {heading.text && <PortableText value={heading.text} />}

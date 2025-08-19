@@ -8,7 +8,9 @@ import DirectoryPagination from "./DirectoryPagination";
 import { client } from "../../../../../config/sanity";
 
 const ArticlesDirectory = () => {
-  const articlesGridRef = React.useRef<HTMLDivElement>(null);
+  const headingRef = React.useRef<HTMLHeadingElement>(
+    null,
+  ) as React.RefObject<HTMLHeadingElement>;
   const [articles, setArticles] = useState<CardBaseProps[] | null>(null);
   const [selectedFilter, setSelectedFilter] = useState<string | null>(null);
   const [page, setPage] = useState(0);
@@ -41,7 +43,7 @@ const ArticlesDirectory = () => {
   const handlePageChange = (newPage: number) => {
     setPage(newPage);
     setTimeout(() => {
-      articlesGridRef.current?.scrollIntoView({
+      headingRef.current?.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
@@ -59,9 +61,10 @@ const ArticlesDirectory = () => {
         filters={filters}
         selectedFilter={selectedFilter}
         setSelectedFilter={setSelectedFilter}
+        h2Ref={headingRef}
       />
 
-      <div ref={articlesGridRef} className="customGrid">
+      <div className="customGrid">
         {paginatedArticles.map((article) => (
           <Card key={article._id} {...article} />
         ))}
