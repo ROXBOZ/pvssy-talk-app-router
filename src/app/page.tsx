@@ -7,7 +7,7 @@ import { client } from "../../config/sanity";
 
 interface HomeContent {
   _type: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export default async function Home() {
@@ -25,7 +25,7 @@ export default async function Home() {
               case "linkCards":
                 return <PagesDirectory key={index} />;
               case "painsBlock":
-                return <ArticlesDirectory item={content} key={index} />;
+                return <ArticlesDirectory key={index} />;
               case "textImageBlock":
                 return <HeroSection key={index} />;
               default:
@@ -38,7 +38,11 @@ export default async function Home() {
   );
 }
 
-async function getData(): Promise<any | null> {
+interface HomepageData {
+  content?: HomeContent[];
+}
+
+async function getData(): Promise<HomepageData | null> {
   try {
     return await client.fetch(
       '*[_type == "homepage" && !(_id in path("drafts.**"))][0]{content[]{...}}',
