@@ -4,13 +4,16 @@ import Card, { CardBaseProps } from "../../UIElements/Card";
 import React, { useState } from "react";
 
 import ArticlesHeading from "./ArticlesHeading";
+import DirectoryPagination from "./DirectoryPagination";
 import { client } from "../../../../../config/sanity";
 
 interface ArticleCardProps extends CardBaseProps {}
 
-const ArticlesDirectory = ({ item }: any) => {
+const ArticlesDirectory = () => {
   const [articles, setArticles] = useState<ArticleCardProps[] | null>(null);
   const [selectedFilter, setSelectedFilter] = useState<string | null>(null);
+  const [page, setPage] = useState(0);
+  const PAGE_SIZE = 6;
 
   React.useEffect(() => {
     getArticles().then(setArticles);
@@ -34,6 +37,12 @@ const ArticlesDirectory = ({ item }: any) => {
       )
     : articles;
 
+  const totalPages = Math.ceil(filteredArticles.length / PAGE_SIZE);
+  const paginatedArticles = filteredArticles.slice(
+    page * PAGE_SIZE,
+    page * PAGE_SIZE + PAGE_SIZE,
+  );
+
   return (
     <section>
       <ArticlesHeading
@@ -41,11 +50,18 @@ const ArticlesDirectory = ({ item }: any) => {
         selectedFilter={selectedFilter}
         setSelectedFilter={setSelectedFilter}
       />
+
       <div className="customGrid">
-        {filteredArticles.map((article) => (
+        {paginatedArticles.map((article) => (
           <Card key={article._id} {...article} />
         ))}
       </div>
+
+      <DirectoryPagination
+        page={page}
+        totalPages={totalPages}
+        setPage={setPage}
+      />
     </section>
   );
 };
