@@ -6,12 +6,12 @@ import React from "react";
 import ButtonLink from "./ButtonLink";
 
 describe("ButtonLink", () => {
-  // it("renders as a button when no href is provided", () => {
-  //   const { getByRole } = render(
-  //     <ButtonLink label="Test" color="primary" onClick={() => {}} />,
-  //   );
-  //   expect(getByRole("button")).toBeInTheDocument();
-  // });
+  it("renders as a button when no href is provided", () => {
+    const { getByRole } = render(
+      <ButtonLink label="Test" color="primary" onClick={() => {}} />,
+    );
+    expect(getByRole("button")).toBeInTheDocument();
+  });
 
   it("renders as a link when href is provided", () => {
     const { getByRole } = render(
