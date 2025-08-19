@@ -15,21 +15,26 @@
   }
 }
 .button--glow:hover {
-  background-color: rgb(255, 199.8772727273, 188);
+  background-color: #ff9f8a;
 }
 
 .button--glow:active {
-  background-color: rgb(255, 157.9181818182, 137);
+  background-color: #ff7557;
 }
 
 .button--glow.active {
-  background-color: rgb(255, 115.9590909091, 86);
+  border: solid 2px #ff4b24;
+  background-color: #ff4b24;
+  animation: glow 8s infinite;
+}
+
+.dot--glow {
   animation: glow 8s infinite;
 }
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 5px 2px #ff4b24, 0 0 100px 60px #e09cff;
+    box-shadow: 0 0 5px 2px #ff4c24, 0 0 100px 60px #e09cff;
     mix-blend-mode: multiply;
   }
   50%, 75% {

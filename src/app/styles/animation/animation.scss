@@ -1,13 +1,3 @@
-/* $violet: #e09cff;
-$orange: #f02b00;
-
-$glow-sm:
-  0 0 5px 2px lighten($orange, 10),
-  0 0 100px 60px $violet;
-$glow-lg:
-  0 0 20px 10px lighten($orange, 10),
-  0 0 50px 30px $violet; */
-
 .home-hero__gradient {
   background: radial-gradient(circle, #ff4a23 0%, transparent 30%);
   animation: gradientAnimation 4s infinite alternate;
@@ -19,24 +9,26 @@ $glow-lg:
     background-size: 100%;
     background-position: center;
   }
-
   100% {
     background-size: 300%;
     background-position: center;
   }
 }
-
 .button--glow:hover {
-  background-color: lighten($primary, 30);
+  background-color: #ff9f8a;
 }
 
 .button--glow:active {
-  background-color: lighten($primary, 20);
+  background-color: #ff7557;
 }
 
 .button--glow.active {
-  border: solid 1py lighten($primary, 10);
-  background-color: lighten($primary, 10);
+  border: solid 2px #ff4b24;
+  background-color: #ff4b24;
+  animation: glow 8s infinite;
+}
+
+.dot--glow {
   animation: glow 8s infinite;
 }
 
@@ -44,7 +36,7 @@ $glow-lg:
   0%,
   100% {
     box-shadow:
-      0 0 5px 2px #ff4b24,
+      0 0 5px 2px #ff4c24,
       0 0 100px 60px #e09cff;
     mix-blend-mode: multiply;
   }
