@@ -25,6 +25,7 @@ export interface HeroBlockData {
     } | null;
     linkRes?: string;
     linkType?: string;
+    onClick?: () => void;
   };
 }
 

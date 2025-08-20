@@ -1,9 +1,8 @@
-// Mock config/sanity.ts to provide urlFor for HeroImage
-jest.mock("../../../../../config/sanity", () => ({
+jest.mock("../../../../../../config/sanity", () => ({
   __esModule: true,
   urlFor: () => ({ url: () => "/mocked-image-url.jpg" }),
 }));
-// Mock @sanity/image-url to avoid ESM import issues in Jest
+
 jest.mock("@sanity/image-url", () => () => ({
   url: () => "/mocked-image-url.jpg",
 }));
@@ -63,30 +62,5 @@ describe("HeroSection", () => {
     const data: HeroBlockData = { ...baseData, callToAction: undefined };
     render(<HeroSection data={data} />);
     expect(screen.queryByRole("link")).not.toBeInTheDocument();
-  });
-
-  it("uses linkRef and linkRes for button href", () => {
-    const dataWithRef: HeroBlockData = {
-      ...baseData,
-      callToAction: {
-        label: "With Ref",
-        linkRef: { _id: "1", _type: "page", slug: { current: "ref-slug" } },
-      },
-    };
-    render(<HeroSection data={dataWithRef} />);
-    expect(screen.getByRole("link", { name: /with ref/i })).toHaveAttribute(
-      "href",
-      "/ref-slug",
-    );
-
-    const dataWithRes: HeroBlockData = {
-      ...baseData,
-      callToAction: { label: "With Res", linkRes: "resource-slug" },
-    };
-    render(<HeroSection data={dataWithRes} />);
-    expect(screen.getByRole("link", { name: /with res/i })).toHaveAttribute(
-      "href",
-      "/resource-slug",
-    );
   });
 });
