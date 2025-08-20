@@ -1,22 +1,25 @@
 # pvssy talk – Website Remake (V3)
 
-This project is a complete remake of an existing website, using **Next.js App Router**, TypeScript, Tailwind CSS, and Sanity CMS.
+This project is a complete remake of [www.pvssy-talk.org](https://www.pvssy-talk.org), using **Next.js App Router**, TypeScript, Tailwind CSS, **Sass** (for animation and complex UI), Sanity CMS, Jest, Storybook, GSAP and more.
 
-The goal is to demonstrate **best practices, accessibility, testing, CI/CD, and disciplined GitHub workflows**, while improving usability and design over previous versions.
+The goal is to demonstrate **management of Data Fetching in App Router, best practices, senior accessibility practices, disciplined testing, CI/CD and GitHub workflows, Storybook (...)**, while improving usability and design over previous versions.
 
-> ⚠️ **Note:** Focus management and some accessibility features are still in progress. Not all focus states and keyboard navigation are implemented yet. Improvements are ongoing.
+> ⚠️ **Note:** Accessibility features are still in progress.
 
 ---
 
 ## 💡 Motivation & Project Evolution
 
+**Note:** The V2 version is currently online at [pvssy-talk.org](https://pvssy-talk.org). It was built in 2023-2024. V3 is a demonstration project and is not meant to be a complete. A View-Only access to the Sanity Interface and to Storybook will be joined here.
+
 The project has evolved through three versions:
 
 - **V1 (MERN stack):** The first working version, heavy, no CMS, limited scalability.
-- **V2 (Next.js Page Router + TypeScript + Sass + Sanity):** A more modern version, but some features were skipped due to funding constraints. Accessibility was improved, but best practices, testing, and CI/CD were missing.
+- **V2 (Next.js Page Router + TypeScript + Sass + Sanity):** A more modern version, but some features were skipped due to funding constraints. Accessibility was implemented, but best practices, testing, and CI/CD were missing.
 - **V3 (this version):**
   - **Accessibility:** Going beyond V2, still a work in progress.
   - **Testing:** **Jest** and Testing Library are set up and in use for unit and integration tests.
+  - **Sanity & Storybook:** This version will demonstrate integration with Sanity CMS and Storybook for UI development/documentation.
   - **CI/CD pipelines:** Not yet implemented, but planned.
   - **GitHub best practices:** The repo is on `main`, but PR/branch workflow and templates are not yet enforced.
   - **Copilot rules:** Not yet configured, but planned.
@@ -25,7 +28,8 @@ The project has evolved through three versions:
 
 ## 🛠 Tech Stack
 
-- **Frontend:** Next.js (App Router), TypeScript, Tailwind CSS
+- **Frontend:** Next.js (App Router), TypeScript, Tailwind CSS (main styling), **Sass** (for animation and complex UI)
+- **UI:** Storybook
 - **CMS:** Sanity (for content consistency)
 - **Testing:** Jest + React Testing Library (working, some coverage)
 - **CI/CD:** Planned (not yet implemented)
@@ -37,24 +41,23 @@ The project has evolved through three versions:
 
 ### ✅ What’s Done
 
-- Next.js App Router, TypeScript, Tailwind, and Sanity CMS are set up
+- Next.js App Router, TypeScript, Tailwind, and Sanity CMS (since V2) are set up
 - ESLint and Prettier (with Tailwind plugin) are configured
 - Jest and React Testing Library are working, with some tests written
-- Some accessibility and UX improvements
+- Some accessibility and UX/UX improvements
 
 ### 🟡 What’s In Progress
 
-- Focus management and full keyboard accessibility
-- Expanding test coverage for all components and features
-- Building out the full component library and pages
+- Storybook
+- CI/CD (GitHub Actions for linting, testing, deployment)
+- Add and enforce Copilot rules for code style, comments, accessibility, and testing
 
 ### 🔜 What’s Planned
 
-- Add CI/CD (GitHub Actions for linting, testing, deployment)
 - Enforce PR/branch workflow and add templates
 - Add and enforce Copilot rules for code style, comments, accessibility, and testing
 - Complete accessibility and usability improvements
-- Add more documentation and contribution guidelines
+- Add more documentation guidelines
 
 ---
 
@@ -69,11 +72,10 @@ This version uses the **Next.js App Router** for routing and layouts, replacing 
 ```text
 ├─ /src/app/components   # Reusable UI components
 ├─ /src/app              # Next.js App Router pages and layouts
-├─ /src/app/styles       # Tailwind & global styles
+├─ /src/app/styles       # Tailwind & Sass Global styles
 ├─ /src/app/hooks        # React hooks
 ├─ /config               # Sanity config
 ├─ /public/fonts         # Custom fonts
-├─ /__tests__            # Jest test files
 ```
 
 ---
