@@ -30,7 +30,8 @@ export default async function Stats() {
         {data.callToAction?.label && (
           <ButtonLink
             label={data.callToAction.label}
-            href={`/${data.callToAction.link?.slug?.current ?? ""}`}
+            href=""
+            // href={`/${data.callToAction.link?.slug?.current ?? ""}`}
             hasArrow={true}
             color="primary"
           />

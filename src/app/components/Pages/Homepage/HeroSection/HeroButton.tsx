@@ -8,18 +8,18 @@ interface HeroButtonProps {
 
 const HeroButton: React.FC<HeroButtonProps> = ({ callToAction }) => {
   if (!callToAction) return null;
-  let buttonHref = callToAction.href;
-  if (callToAction.linkRef && callToAction.linkRef.slug) {
-    buttonHref = `/${callToAction.linkRef.slug.current}`;
-  } else if (callToAction.linkRes) {
-    buttonHref = `/${callToAction.linkRes}`;
-  }
-  if (!callToAction.label || !buttonHref) return null;
+  // let buttonHref = callToAction.href;
+  // if (callToAction.linkRef && callToAction.linkRef.slug) {
+  //   buttonHref = `/${callToAction.linkRef.slug.current}`;
+  // } else if (callToAction.linkRes) {
+  //   buttonHref = `/${callToAction.linkRes}`;
+  // }
+  // if (!callToAction.label || !buttonHref) return null;
   return (
     <ButtonLink
       hasArrow={true}
       label={callToAction.label}
-      href={buttonHref}
+      href=""
       color="primary"
     />
   );

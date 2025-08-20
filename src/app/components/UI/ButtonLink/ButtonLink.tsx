@@ -24,9 +24,11 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
   type,
   className,
 }) => {
+  // If no valid href or onClick, force disabled
+  const isDisabled = disabled || (!href && typeof onClick !== "function");
   const baseClasses =
     "whitespace-nowrap group flex h-fit w-fit items-center gap-2 rounded-full px-6 py-2 font-semibold ring-inset";
-  const hoverClasses = disabled
+  const hoverClasses = isDisabled
     ? ""
     : "hover:ring-2 hover:delay-200 hover:duration-200";
   const colorClasses =
@@ -35,10 +37,10 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
       : color === "secondary"
         ? "bg-secondary-200 ring-secondary-300 active:bg-secondary-300"
         : "border-primary-400 ring-primary-300 active:bg-primary-300 border-2";
-  const disabledButtonClasses = disabled
+  const disabledButtonClasses = isDisabled
     ? "cursor-not-allowed opacity-50"
     : "cursor-pointer";
-  const disabledLinkClasses = disabled
+  const disabledLinkClasses = isDisabled
     ? "cursor-not-allowed opacity-50"
     : "cursor-pointer";
 
@@ -60,12 +62,12 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
       <Link
         href={href}
         className={`${baseClasses} ${hoverClasses} ${colorClasses} ${disabledLinkClasses} ${className || ""}`}
-        aria-disabled={disabled}
-        tabIndex={disabled ? -1 : 0}
+        aria-disabled={isDisabled}
+        tabIndex={isDisabled ? -1 : 0}
       >
         {hasArrow && arrowDirection === "left" && (
           <span
-            className={`transition-transform duration-300 ${disabled ? "" : arrowHoverMap[arrowDirection as string] || "group-hover:translate-x-1"}`}
+            className={`transition-transform duration-300 ${isDisabled ? "" : arrowHoverMap[arrowDirection as string] || "group-hover:translate-x-1"}`}
           >
             {arrowMap[arrowDirection as string] || "←"}
           </span>
@@ -73,7 +75,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
         {label}
         {hasArrow && arrowDirection !== "left" && (
           <span
-            className={`transition-transform duration-300 ${disabled ? "" : arrowHoverMap[arrowDirection as string] || "group-hover:translate-x-1"}`}
+            className={`transition-transform duration-300 ${isDisabled ? "" : arrowHoverMap[arrowDirection as string] || "group-hover:translate-x-1"}`}
           >
             {arrowMap[arrowDirection as string] || "→"}
           </span>
@@ -86,11 +88,11 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
       type={type}
       className={`${baseClasses} ${hoverClasses} ${colorClasses} ${disabledButtonClasses} ${className || ""}`}
       onClick={onClick}
-      disabled={disabled}
+      disabled={isDisabled}
     >
       {hasArrow && arrowDirection === "left" && (
         <span
-          className={`transition-transform duration-300 ${disabled ? "" : arrowHoverMap[arrowDirection as string] || "group-hover:translate-x-1"}`}
+          className={`transition-transform duration-300 ${isDisabled ? "" : arrowHoverMap[arrowDirection as string] || "group-hover:translate-x-1"}`}
         >
           {arrowMap[arrowDirection as string] || "←"}
         </span>
@@ -98,7 +100,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
       {label}
       {hasArrow && arrowDirection !== "left" && (
         <span
-          className={`transition-transform duration-300 ${disabled ? "" : arrowHoverMap[arrowDirection as string] || "group-hover:translate-x-1"}`}
+          className={`transition-transform duration-300 ${isDisabled ? "" : arrowHoverMap[arrowDirection as string] || "group-hover:translate-x-1"}`}
         >
           {arrowMap[arrowDirection as string] || "→"}
         </span>

@@ -21,7 +21,7 @@ export default {
         component: ` ButtonLink is a styled component that visually appears as a button but can function as either a button or a link. Use for Links with caution.
 
 ### TODO
-- [ ] Add accessibility features (e.g. focus styles)
+- [ ] Add accessibility features (e.g. focus styles, ring!)
 - [ ] "color" should be renamed "style" and allow outline and fill for both primary and secondary colors.
 - [ ] border style is currently bigger due to border. fix
 - [ ] border color shades should be adjusted
