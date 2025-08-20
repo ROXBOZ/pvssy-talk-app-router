@@ -1,6 +1,6 @@
 import React from "react";
-import ButtonLink from "../../UIElements/ButtonLink/ButtonLink";
 import type { HeroBlockData } from "./HeroSection";
+import ButtonLink from "@/app/components/UI/ButtonLink/ButtonLink";
 
 interface HeroButtonProps {
   callToAction?: HeroBlockData["callToAction"];

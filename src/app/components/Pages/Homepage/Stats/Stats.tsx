@@ -1,10 +1,10 @@
 export const dynamic = "force-static";
 
-import ButtonLink from "../../UIElements/ButtonLink/ButtonLink";
 import React from "react";
-import { client } from "../../../../../config/sanity";
 
 import StatsAnimation from "./StatsAnimation";
+import ButtonLink from "@/app/components/UI/ButtonLink/ButtonLink";
+import { client } from "../../../../../../config/sanity";
 
 interface Stats {
   text: string;

@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import Card, { CardBaseProps } from "../../UI/Card/Card";
-import ArticlesHeading from "../../Pages/Homepage/ArticlesDirectory/ArticlesHeading";
-import DirectoryPagination from "../../Pages/Homepage/ArticlesDirectory/DirectoryPagination";
-import { client } from "../../../../../config/sanity";
+
+import ArticlesHeading from "./ArticlesHeading";
+import DirectoryPagination from "./DirectoryPagination";
+import Card, { CardBaseProps } from "@/app/components/UI/Card/Card";
+import { client } from "../../../../../../config/sanity";
 
 const ArticlesDirectory = () => {
   const headingRef = React.useRef<HTMLHeadingElement>(

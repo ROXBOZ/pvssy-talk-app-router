@@ -1,4 +1,4 @@
-import ButtonLink from "../UIElements/ButtonLink/ButtonLink";
+import ButtonLink from "../UI/ButtonLink/ButtonLink";
 import HeaderBar from "./TopBar"; // client component
 import { client } from "../../../../config/sanity";
 

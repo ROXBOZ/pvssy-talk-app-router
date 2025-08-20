@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { urlFor } from "../../../../../config/sanity";
+
 import type { HeroBlockData } from "./HeroSection";
+import { urlFor } from "../../../../../../config/sanity";
 
 interface HeroImageProps {
   figure?: HeroBlockData["figure"];

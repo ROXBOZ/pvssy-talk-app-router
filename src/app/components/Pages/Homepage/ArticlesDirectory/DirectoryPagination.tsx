@@ -1,4 +1,4 @@
-import ButtonLink from "../../UIElements/ButtonLink/ButtonLink";
+import ButtonLink from "@/app/components/UI/ButtonLink/ButtonLink";
 import React from "react";
 
 interface DirectoryPaginationProps {

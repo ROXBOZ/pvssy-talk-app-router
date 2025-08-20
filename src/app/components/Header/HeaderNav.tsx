@@ -1,6 +1,6 @@
 export const dynamic = "force-static";
 
-import ButtonLink from "../UIElements/ButtonLink/ButtonLink";
+import ButtonLink from "../UI/ButtonLink/ButtonLink";
 import React from "react";
 
 interface HeaderNavProps {

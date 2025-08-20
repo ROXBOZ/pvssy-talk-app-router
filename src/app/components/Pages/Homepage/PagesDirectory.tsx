@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../UI/Card/Card";
+import Card from "../../UI/Card/Card";
 
 export interface PageDirectoryData {
   title: string;
