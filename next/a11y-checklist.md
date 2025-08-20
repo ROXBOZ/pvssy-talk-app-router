@@ -59,3 +59,66 @@
 - [x] 4.1.1 Parsing (A) ✅ Automated
 - [x] 4.1.2 Name, Role, Value (A) ✅ Automated
 - [x] 4.1.3 Status Messages (AA) ✅ Automated
+
+# Extra Accessibility & Inclusive Web Tips
+
+## Multilingual & Typography
+
+- [ ] Ensure **correct language attributes** (`lang`) for every part of the page.
+- [ ] Use **appropriate fonts for each script** (e.g., Latin vs. Cyrillic vs. Arabic) for readability.
+- [ ] Consider **line height, letter spacing, and text size** differences for various writing systems.
+- [ ] Avoid hard-coded text sizes—allow **user zoom** and **text scaling**.
+- [ ] Support **right-to-left (RTL) layouts** for languages like Arabic and Hebrew.
+- [ ] Provide **translation or simplified text options** when content is complex.
+
+## Navigation & Interaction
+
+- [ ] Ensure **keyboard accessibility** for all interactive elements.
+- [ ] Maintain **consistent focus order** for better keyboard navigation.
+- [ ] Provide **skip links** to jump to main content.
+- [ ] Offer **multiple ways to navigate** (menu, search, links, breadcrumbs).
+- [ ] Allow users to **customize interaction**: font size, contrast, spacing, color theme.
+- [ ] Avoid hover-only interactions—ensure **tap/click equivalents** for touch users.
+
+## Animations & Motion
+
+- [ ] Provide **reduce-motion option** to respect OS preferences (`prefers-reduced-motion`).
+- [ ] Avoid animations that **flash >3 times per second** (seizure risk).
+- [ ] Ensure **animations don’t cause dizziness or nausea**.
+- [ ] Avoid **auto-playing video/audio** without user control.
+
+## Media & Content
+
+- [ ] Provide **captions and transcripts** for audio/video.
+- [ ] Use **descriptive alt text** for images; complex images may need **long descriptions**.
+- [ ] Ensure **color is not the only cue**—combine with text or icons.
+- [ ] Avoid **complex layouts that break on zoom or small screens**.
+
+## Forms & Interactions
+
+- [ ] Label all form fields clearly; use **`<label>` or `aria-label`**.
+- [ ] Group related fields with **`<fieldset>` and `<legend>`**.
+- [ ] Give **error messages that are clear and accessible**.
+- [ ] Provide **confirmation or undo** options for destructive actions.
+
+## Dynamic Content
+
+- [ ] Use **ARIA live regions** to announce dynamic content changes.
+- [ ] Avoid **unexpected pop-ups or modals** that steal focus.
+- [ ] Ensure **custom widgets** expose correct ARIA roles, states, and properties.
+
+## Testing & Validation
+
+- [ ] Test with **screen readers** (NVDA, VoiceOver, JAWS).
+- [ ] Test with **keyboard only** and without a mouse.
+- [ ] Test with **different devices, screen sizes, and zoom levels**.
+- [ ] Include **users with disabilities** in testing whenever possible.
+
+
+
+
+
+
+
+
+
