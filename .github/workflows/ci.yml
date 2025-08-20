@@ -71,5 +71,7 @@ jobs:
         working-directory: next
 
       - name: Run accessibility tests
-        run: npx pa11y-ci --chrome-launcher-flags='--no-sandbox'
+        run: npx pa11y-ci
         working-directory: next
+        env:
+          PUPPETEER_ARGS: --no-sandbox
