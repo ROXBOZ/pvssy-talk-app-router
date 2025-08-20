@@ -11,10 +11,13 @@ interface HeroImageProps {
 
 const HeroImage: React.FC<HeroImageProps> = ({ figure, title }) => {
   const imageAsset = figure?.image?.asset;
-  const imageSrc =
-    imageAsset && (imageAsset._ref || imageAsset._id)
-      ? urlFor(imageAsset._ref || imageAsset._id).url()
-      : null;
+  let imageSrc: string | null = null;
+  if (imageAsset) {
+    const refOrId = imageAsset._ref || imageAsset._id;
+    if (typeof refOrId === "string") {
+      imageSrc = urlFor(refOrId).url();
+    }
+  }
   const imageAlt = figure?.altText || figure?.image?.alt || title || "";
 
   if (!imageSrc) {
