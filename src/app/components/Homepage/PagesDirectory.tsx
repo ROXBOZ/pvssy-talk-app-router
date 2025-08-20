@@ -1,5 +1,5 @@
-import Card from "../UIElements/Card";
 import React from "react";
+import Card from "../UIElements/Card/Card";
 
 export interface PageDirectoryData {
   title: string;
@@ -60,9 +60,7 @@ const PagesDirectory: React.FC<{ data: PageDirectoryData }> = ({ data }) => {
       </div>
       <div className="customGrid">
         {cards && cards.length > 0 ? (
-          cards.map((card) => (
-            <Card key={card._id} {...card} showButton={true} />
-          ))
+          cards.map((card, i) => <Card key={i} {...card} showButton={true} />)
         ) : (
           <div>No pages found.</div>
         )}

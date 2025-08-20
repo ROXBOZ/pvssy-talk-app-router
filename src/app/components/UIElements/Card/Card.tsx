@@ -1,7 +1,7 @@
-import ButtonLink from "./ButtonLink/ButtonLink";
 import Image from "next/image";
 import React from "react";
-import { urlFor } from "../../../../config/sanity";
+import { urlFor } from "../../../../../config/sanity";
+import ButtonLink from "../ButtonLink/ButtonLink";
 
 export interface CardBaseProps {
   _id?: string;

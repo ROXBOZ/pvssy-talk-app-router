@@ -33,7 +33,7 @@ const HeroSection: React.FC<{ data: HeroBlockData }> = ({ data }) => {
 
   const { callToAction, figure, title, text } = data;
   return (
-    <section className="customGrid bg-primary-100 py-16 lg:py-0">
+    <section className="customGrid bg-primary-50 py-16 lg:py-0">
       <div className="col-span-6 col-start-1 flex items-center lg:col-span-3">
         <div className="flex flex-col gap-4 md:gap-8">
           <div className="flex flex-col gap-4">
