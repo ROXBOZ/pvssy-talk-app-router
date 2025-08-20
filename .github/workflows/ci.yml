@@ -1,3 +1,15 @@
+# npm ci
+# npm run lint
+# npm run prettier:check
+# npm run build
+# npm test
+# npm run start &  # Start server in background
+# npx wait-on http://localhost:3000
+# npx pa11y-ci
+# npm run type-check
+# npx lhci autorun --collect.url=http://localhost:3000
+# npm run analyze
+
 name: CI
 
 on:
