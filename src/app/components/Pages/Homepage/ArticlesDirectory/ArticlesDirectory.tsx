@@ -69,7 +69,6 @@ const ArticlesDirectory = () => {
           <Card key={article._id} {...article} />
         ))}
       </div>
-
       <DirectoryPagination
         page={page}
         totalPages={totalPages}
