@@ -2,7 +2,6 @@ export const dynamic = "force-static";
 
 import HeaderNav from "./HeaderNav";
 import React from "react";
-import { client } from "../../../../config/sanity";
 
 interface HeaderNavProps {
   headerMenu?: {
@@ -29,14 +28,3 @@ const TopBar = async () => {
 };
 
 export default TopBar;
-
-async function getData(): Promise<HeaderNavProps | null> {
-  try {
-    return await client.fetch(
-      '*[_type == "menu" && !(_id in path("drafts.**"))][0]{headerMenu}',
-    );
-  } catch (error) {
-    console.error("Error fetching header menu:", error);
-    return null;
-  }
-}
