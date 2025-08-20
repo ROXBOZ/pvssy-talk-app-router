@@ -6,8 +6,8 @@ The goal is to demonstrate **management of Data Fetching in App Router, best pra
 
 > ⚠️ **Note:** pvssy talk is a Sex Ed project by Anne-Soorya Takoordyal. I developed the V1 with the MERN (MongoDB, Express, React, Node.js) stack as my graduation project at the Code Academy Berlin in 2023, and the V2 with the JAMStack Next.js, TypeScript, Sanity CMS as a freelancer in 2023-2024. The V2 version is currently online at [pvssy-talk.org](https://pvssy-talk.org). V3 is a demo project and is not meant to be a complete.
 
-SANITY PREVIEW CMS : _coming shortly_
-STORYBOOK UI : -coming_shortly_
+SANITY PREVIEW CMS : xx
+STORYBOOK UI : xx
 
 ---
 
@@ -29,12 +29,12 @@ The project has evolved through three versions:
 
 ## 🛠 Tech Stack
 
-- **Frontend:** Next.js (App Router), TypeScript, Tailwind CSS (main styling), **Sass** (for animation and complex UI)
+- **Frontend:** Next.js (App Router), React, TypeScript, JavaScript, Tailwind CSS (main styling), **Sass** (for animation and complex UI)
 - **UI Doc:** Storybook
-- **CMS:** Sanity (for content consistency)
-- **Testing:** Jest + React Testing Library (working, some coverage)
-- **CI/CD:** Planned (not yet implemented)
-- **Version Control:** GitHub, with branching and commit practices (manual, not enforced)
+- **CMS:** Sanity
+- **Testing:** Jest
+- **CI/CD:** xx
+- **Version Control:** GitHub
 
 ---
 
@@ -44,64 +44,12 @@ The project has evolved through three versions:
 
 - Next.js App Router, TypeScript, Tailwind, and Sanity CMS (since V2) are set up
 - ESLint and Prettier (with Tailwind plugin) are configured
-- Jest and React Testing Library are working, with some tests written
-- Some accessibility and UX/UX improvements
+- Some accessibility and UX/UX improvements 
+
 
 ### 🟡 What’s In Progress
 
 - Storybook
-- CI/CD (GitHub Actions for linting, testing, deployment)
-- Add and enforce Copilot rules for code style, comments, accessibility, and testing
-
-### 🔜 What’s Planned
-
-- Enforce PR/branch workflow and add templates
-- Add and enforce Copilot rules for code style, comments, accessibility, and testing
-- Complete accessibility and usability improvements
-- Add more documentation guidelines
-
----
-
-## 🔀 Migration: Switch to Next.js App Router
-
-This version uses the **Next.js App Router** for routing and layouts, replacing the old Page Router. This enables improved routing patterns, layouts, and server components.
-
----
-
-## 📂 Project Structure
-
-```text
-├─ /src/app/components   # Reusable UI components
-├─ /src/app              # Next.js App Router pages and layouts
-├─ /src/app/styles       # Tailwind & Sass Global styles
-├─ /src/app/hooks        # React hooks
-├─ /config               # Sanity config
-├─ /public/fonts         # Custom fonts
-```
-
----
-
-## 🧪 Testing & CI/CD
-
-- **Jest** and **React Testing Library** are set up and in use for unit and integration tests
-- **GitHub Actions** pipeline is planned, but not yet implemented
-
----
-
-## 🤖 GitHub Copilot Setup & Rules
-
-Copilot rules and settings are planned, but not yet configured. The goal is to enforce code style, comments, accessibility, and testing best practices across the project. Example rules (to be added):
-
-```json
-{
-  "rules": {
-    "codeStyle": "consistent",
-    "comments": "clear_and_descriptive",
-    "accessibility": "aria_checks_enabled",
-    "testing": "recommend_testing_best_practices",
-    "performance": "suggest_lazy_loading_and_memoization",
-    "security": "warn_hardcoded_secrets",
-    "ci_cd": "pre_commit_lint_and_test_suggestions"
-  }
-}
-```
+- Some tests written with Jest
+- CI workflow is set up with pa11y for accessibility
+- Copilot rules are set for code style, comments, accessibility, and testing
