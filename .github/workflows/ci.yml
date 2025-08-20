@@ -71,7 +71,5 @@ jobs:
         working-directory: next
 
       - name: Run accessibility tests
-        run: npx pa11y-ci
+        run: PUPPETEER_ARGS="--no-sandbox" npx pa11y-ci
         working-directory: next
-        env:
-          PUPPETEER_ARGS: --no-sandbox
