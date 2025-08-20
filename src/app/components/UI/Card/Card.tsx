@@ -42,7 +42,7 @@ const Card: React.FC<CardBaseProps> = ({
           {filters.map((filter, idx) => (
             <span
               key={idx}
-              className="group-hover:bg-primary-100 text-primary-800 bg-primary-200 rounded-full px-2 py-1 text-xs"
+              className="group-hover:bg-tertiary-100 text-tertiary-800 bg-tertiary-200 rounded-full px-2 py-1 text-xs"
             >
               {filter}
             </span>
