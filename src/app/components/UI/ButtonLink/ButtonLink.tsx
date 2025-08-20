@@ -25,7 +25,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
   className,
 }) => {
   const baseClasses =
-    "group flex h-fit w-fit items-center gap-2 rounded-full px-6 py-2 font-semibold ring-inset";
+    "whitespace-nowrap group flex h-fit w-fit items-center gap-2 rounded-full px-6 py-2 font-semibold ring-inset";
   const hoverClasses = disabled
     ? ""
     : "hover:ring-2 hover:delay-200 hover:duration-200";
