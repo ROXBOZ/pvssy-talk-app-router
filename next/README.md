@@ -25,6 +25,7 @@ The project has evolved through three versions:
   - **Copilot rules:** Not yet configured, but planned.
   - **Styling:** This version uses a combination of TailwindCSS for scalability and Sass for complexe features like animations and mixins. A few components might be later fully styled with Sass to demonstrate Sass best practices.
   - **App Router:** First Next.js App. Learning new practices to organize directory and fetch datas.
+
 ---
 
 ## 🛠 Tech Stack
@@ -44,8 +45,7 @@ The project has evolved through three versions:
 
 - Next.js App Router, TypeScript, Tailwind, and Sanity CMS (since V2) are set up
 - ESLint and Prettier (with Tailwind plugin) are configured
-- Some accessibility and UX/UX improvements 
-
+- Some accessibility and UX/UX improvements
 
 ### 🟡 What’s In Progress
 
