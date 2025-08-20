@@ -21,7 +21,10 @@ const TopBar = async () => {
 
   return (
     <header className="customGrid items-baseline justify-between p-4">
-      <div className="font-heading text-2xl">pvssy&nbsp;talk</div>
+      <div className="font-heading text-2xl">
+        pvssy&nbsp;talk <sup>v3</sup>
+      </div>
+      <HeaderNav />
       {/* <HeaderNav headerMenu={data?.headerMenu} /> */}
     </header>
   );

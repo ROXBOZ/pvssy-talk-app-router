@@ -1,5 +1,6 @@
 export const dynamic = "force-static";
 
+import Link from "next/link";
 import ButtonLink from "../UI/ButtonLink/ButtonLink";
 import React from "react";
 
@@ -15,10 +16,22 @@ interface HeaderNavProps {
   }[];
 }
 
-const HeaderNav = ({ headerMenu }: HeaderNavProps) => {
+const HeaderNav = () => {
   return (
     <nav className="col-start-4 col-end-7 hidden items-baseline justify-between md:flex">
-      {headerMenu && (
+      <ul className="flex gap-12">
+        <li>
+          <Link href="https://github.com/ROXBOZ/pvssy-talk-app-router">
+            GitHub Repo
+          </Link>
+        </li>
+        <li className="cursor-not-allowed opacity-50">Sanity CMS</li>
+        <li className="cursor-not-allowed opacity-50">Storybook Doc</li>
+        <li>
+          <Link href="https://www.pvssy-talk.org">Online Website (V2)</Link>
+        </li>
+      </ul>
+      {/* {headerMenu && (
         <ul className="flex gap-24">
           {headerMenu
             .filter((item) => item.title)
@@ -32,7 +45,7 @@ const HeaderNav = ({ headerMenu }: HeaderNavProps) => {
         href=""
         label="Participer"
         hasArrow={false}
-      />
+      /> */}
     </nav>
   );
 };
