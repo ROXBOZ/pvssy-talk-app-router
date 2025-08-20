@@ -172,7 +172,6 @@ export const Secondary = () => {
     </div>
   );
 };
-
 export const Border = () => {
   return (
     <div style={{ display: "flex", gap: 24 }}>
@@ -183,7 +182,13 @@ export const Border = () => {
           alignItems: "center",
         }}
       >
-        <ButtonLink label="Default" color="border" href="/" />
+        <ButtonLink
+          label="Default"
+          color="border"
+          href="/"
+          hasArrow
+          arrowDirection="bottom"
+        />
         <span style={{ marginTop: 8, fontSize: 12 }}>Default</span>
       </div>
       {/* Hover (simulated with a custom class) */}
@@ -199,6 +204,8 @@ export const Border = () => {
           color="border"
           href="/"
           className="ring-primary-300 border-primary-400 ring-2"
+          hasArrow
+          arrowDirection="bottom"
         />
         <span style={{ marginTop: 8, fontSize: 12 }}>Hover</span>
       </div>
@@ -215,6 +222,8 @@ export const Border = () => {
           color="border"
           href="/"
           className="bg-primary-300 border-primary-400"
+          hasArrow
+          arrowDirection="bottom"
         />
         <span style={{ marginTop: 8, fontSize: 12 }}>Active</span>
       </div>
@@ -226,7 +235,14 @@ export const Border = () => {
           alignItems: "center",
         }}
       >
-        <ButtonLink label="Disabled" color="border" href="/" disabled />
+        <ButtonLink
+          label="Disabled"
+          color="border"
+          href="/"
+          hasArrow
+          arrowDirection="bottom"
+          disabled
+        />
         <span style={{ marginTop: 8, fontSize: 12 }}>Disabled</span>
       </div>
     </div>
