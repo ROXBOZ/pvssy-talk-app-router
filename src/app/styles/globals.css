@@ -19,10 +19,15 @@
   --color-secondary-300: #b7fb5b;
   --color-secondary-400: #9bf229;
 
+  --color-tertiary-50: #fff3ed;
+  --color-tertiary-100: #ffe3d4;
+  --color-tertiary-200: #ffc3a8;
   --color-tertiary-300: #ffa794;
   --color-tertiary-400: #ff7557;
   --color-tertiary-500: #ff4a23;
   --color-tertiary-600: #f02b00;
+  --color-tertiary-700: #c71207;
+  --color-tertiary-800: #9e110e;
 }
 
 body {
