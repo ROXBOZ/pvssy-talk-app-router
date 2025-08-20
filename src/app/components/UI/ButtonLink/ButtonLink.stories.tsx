@@ -18,12 +18,13 @@ export default {
     layout: "centered",
     docs: {
       description: {
-        component: `ButtonLink is a component that renders either a Link or a Button, depending on whether it receives a href or a onClick prop.
+        component: ` ButtonLink is a styled component that visually appears as a button but can function as either a button or a link. Use for Links with caution.
 
 ### TODO
 - [ ] Add accessibility features (e.g. focus styles)
-- [ ] Test with long labels
 - [ ] "color" should be renamed "style" and allow outline and fill for both primary and secondary colors.
+- [ ] border style is currently bigger due to border. fix
+- [ ] border color shades should be adjusted
         `,
       },
     },
@@ -36,7 +37,7 @@ export default {
     href: { table: { disable: true } },
   },
 };
-export const PrimaryStates = () => {
+export const Primary = () => {
   return (
     <div style={{ display: "flex", gap: 24 }}>
       <div
@@ -112,7 +113,7 @@ export const PrimaryStates = () => {
     </div>
   );
 };
-export const SecondaryStates = () => {
+export const Secondary = () => {
   return (
     <div style={{ display: "flex", gap: 24 }}>
       <div
@@ -166,6 +167,66 @@ export const SecondaryStates = () => {
         }}
       >
         <ButtonLink label="Disabled" color="secondary" href="/" disabled />
+        <span style={{ marginTop: 8, fontSize: 12 }}>Disabled</span>
+      </div>
+    </div>
+  );
+};
+
+export const Border = () => {
+  return (
+    <div style={{ display: "flex", gap: 24 }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <ButtonLink label="Default" color="border" href="/" />
+        <span style={{ marginTop: 8, fontSize: 12 }}>Default</span>
+      </div>
+      {/* Hover (simulated with a custom class) */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <ButtonLink
+          label="Hover"
+          color="border"
+          href="/"
+          className="ring-primary-300 border-primary-400 ring-2"
+        />
+        <span style={{ marginTop: 8, fontSize: 12 }}>Hover</span>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <ButtonLink
+          label="Active"
+          color="border"
+          href="/"
+          className="bg-primary-300 border-primary-400"
+        />
+        <span style={{ marginTop: 8, fontSize: 12 }}>Active</span>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <ButtonLink label="Disabled" color="border" href="/" disabled />
         <span style={{ marginTop: 8, fontSize: 12 }}>Disabled</span>
       </div>
     </div>
