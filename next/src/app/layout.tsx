@@ -5,6 +5,10 @@ import Footer from "./components/Footer/Footer";
 import HomeHero from "./components/Header/HomeHero";
 import ButtonLink from "./components/UI/ButtonLink/ButtonLink";
 
+export const metadata = {
+  title: "pvssy talk version 3 is a demo for coding best practices",
+};
+
 export default async function RootLayout({
   children,
 }: Readonly<{
