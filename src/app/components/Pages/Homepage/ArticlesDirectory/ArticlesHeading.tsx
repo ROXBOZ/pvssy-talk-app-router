@@ -56,7 +56,7 @@ const ArticlesHeading: React.FC<ArticlesHeadingProps> = ({
   if (!heading) return null;
 
   return (
-    <div className="customGrid items-baseline py-8">
+    <div id="articles-directory" className="customGrid items-baseline py-8">
       <div className="col-start-1 col-end-6 lg:col-end-3">
         <h2 ref={h2Ref} className="font-heading text-3xl">
           {heading.title}
