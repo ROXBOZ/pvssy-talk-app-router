@@ -17,8 +17,6 @@ interface HeaderNavProps {
 }
 
 const TopBar = async () => {
-  const data: HeaderNavProps | null = await getData();
-
   return (
     <header className="customGrid items-baseline justify-between p-4">
       <div className="font-heading text-2xl">

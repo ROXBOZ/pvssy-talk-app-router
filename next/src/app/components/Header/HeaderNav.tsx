@@ -4,18 +4,6 @@ import Link from "next/link";
 import ButtonLink from "../UI/ButtonLink/ButtonLink";
 import React from "react";
 
-interface HeaderNavProps {
-  headerMenu?: {
-    _type: string;
-    title?: string;
-    link?: string;
-    isAction?: boolean;
-    content?: {
-      pages?: { title: string; slug: { current: string } }[];
-    };
-  }[];
-}
-
 const HeaderNav = () => {
   return (
     <nav className="col-start-4 col-end-7 hidden items-baseline justify-between md:flex">

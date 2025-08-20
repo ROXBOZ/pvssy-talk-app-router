@@ -7,7 +7,6 @@ import HeroSection, {
   HeroBlockData,
 } from "./components/Pages/Homepage/HeroSection/HeroSection";
 import Stats from "./components/Pages/Homepage/Stats/Stats";
-import ButtonLink from "./components/UI/ButtonLink/ButtonLink";
 
 interface HomeContent {
   _type: string;
