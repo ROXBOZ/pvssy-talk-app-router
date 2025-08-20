@@ -74,14 +74,14 @@ jobs:
         run: npx pa11y-ci
         working-directory: next
 
-      # - name: Type check
-      #   run: npm run type-check
-      #   working-directory: next
+      - name: Type check
+        run: npm run type-check
+        working-directory: next
 
-      # - name: Run Lighthouse CI
-      #   run: npx lhci autorun --collect.url=http://localhost:3000
-      #   working-directory: next
+      - name: Run Lighthouse CI
+        run: npx lhci autorun --collect.url=http://localhost:3000
+        working-directory: next
 
-      # - name: Check bundle size
-      #   run: npx next build && npx next-bundle-analyzer
-      #   working-directory: next
+      - name: Check bundle size
+        run: npm run analyze
+        working-directory: next
