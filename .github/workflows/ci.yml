@@ -71,5 +71,5 @@ jobs:
         working-directory: next
 
       - name: Run accessibility tests
-        run: npx pa11y-ci --chrome-flags="--no-sandbox"
+        run: npx pa11y-ci
         working-directory: next
