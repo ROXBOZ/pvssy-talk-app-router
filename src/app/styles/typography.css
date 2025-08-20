@@ -38,8 +38,18 @@
   font-family: "ESKlarheit-Book", sans-serif;
 }
 
+* {
+  font-feature-settings: "ss11" !important;
+  text-wrap: balance;
+  widows: 2;
+  orphans: 2;
+  hyphens: auto;
+}
+
 h2,
 h3,
-p {
+p,
+span,
+a {
   @apply max-w-[65ch];
 }

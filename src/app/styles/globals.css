@@ -36,7 +36,6 @@ body {
 
 * {
   scroll-behavior: smooth;
-  font-feature-settings: "ss11" !important;
 }
 
 section {
