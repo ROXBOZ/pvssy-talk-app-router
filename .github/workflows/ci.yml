@@ -73,3 +73,11 @@ jobs:
       - name: Run accessibility tests
         run: npx pa11y-ci
         working-directory: next
+
+      # - name: Run Lighthouse CI
+      #   run: npx lhci autorun --collect.url=http://localhost:3000
+      #   working-directory: next
+
+      # - name: Check bundle size
+      #   run: npx next build && npx next-bundle-analyzer
+      #   working-directory: next
