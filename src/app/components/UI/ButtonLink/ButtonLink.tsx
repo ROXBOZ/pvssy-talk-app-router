@@ -10,6 +10,7 @@ type ButtonLinkProps = {
   onClick?: () => void;
   disabled?: boolean;
   type?: "button" | "submit";
+  className?: string;
 };
 
 const ButtonLink: React.FC<ButtonLinkProps> = ({
@@ -21,6 +22,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
   onClick,
   disabled,
   type,
+  className,
 }) => {
   const baseClasses =
     "group flex h-fit w-fit items-center gap-2 rounded-full px-6 py-2 font-semibold ring-inset";
@@ -57,7 +59,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
     return (
       <Link
         href={href}
-        className={`${baseClasses} ${hoverClasses} ${colorClasses} ${disabledLinkClasses}`}
+        className={`${baseClasses} ${hoverClasses} ${colorClasses} ${disabledLinkClasses} ${className || ""}`}
         aria-disabled={disabled}
         tabIndex={disabled ? -1 : 0}
       >
@@ -82,7 +84,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
   return (
     <button
       type={type}
-      className={`${baseClasses} ${hoverClasses} ${colorClasses} ${disabledButtonClasses}`}
+      className={`${baseClasses} ${hoverClasses} ${colorClasses} ${disabledButtonClasses} ${className || ""}`}
       onClick={onClick}
       disabled={disabled}
     >
