@@ -13,8 +13,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "a11y": "pa11y-ci",
-  "type-check": "tsc --noEmit",
-  "analyze": "ANALYZE=true next build"
+    "type-check": "tsc --noEmit",
+    "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
     "@portabletext/react": "^3.2.1",
