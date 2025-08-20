@@ -31,6 +31,7 @@ const HeaderNav = () => {
           <Link href="https://www.pvssy-talk.org">Online Website (V2)</Link>
         </li>
       </ul>
+      <ButtonLink color="secondary" label="Menu" />
       {/* {headerMenu && (
         <ul className="flex gap-24">
           {headerMenu
