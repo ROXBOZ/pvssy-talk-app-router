@@ -1,6 +1,6 @@
 # pvssy talk – Website Remake (V3)
 
-This project is a complete remake of [www.pvssy-talk.org](https://www.pvssy-talk.org), using **Next.js App Router**, TypeScript, Tailwind CSS, **Sass** (for animation and complex UI), Sanity CMS, Jest, Storybook, GSAP and more.
+pvssy-talk-app is a complete remake (V3) of [www.pvssy-talk.org](https://www.pvssy-talk.org), a real project developed for a client, this time using **Next.js App Router**, TypeScript, Tailwind CSS, **Sass** (for animation and complex UI), Sanity CMS, Jest, Storybook, GSAP and more.
 
 The goal is to demonstrate **management of Data Fetching in App Router, best practices, senior accessibility practices, disciplined testing, CI/CD and GitHub workflows, Storybook (...)**, while improving usability and design over previous versions.
 
