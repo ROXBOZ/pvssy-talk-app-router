@@ -27,7 +27,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
   // If no valid href or onClick, force disabled
   const isDisabled = disabled || (!href && typeof onClick !== "function");
   const baseClasses =
-    "whitespace-nowrap group flex h-fit w-fit items-center gap-2 rounded-full px-6 py-2 font-semibold ring-inset";
+    "whitespace-nowrap! whitespace group flex h-fit w-fit items-center gap-2 rounded-full px-6 py-2 font-semibold ring-inset";
   const hoverClasses = isDisabled
     ? ""
     : "hover:ring-2 hover:delay-200 hover:duration-200";
