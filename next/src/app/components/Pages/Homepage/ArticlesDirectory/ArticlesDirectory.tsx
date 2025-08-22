@@ -1,10 +1,10 @@
 "use client";
 
+import Card, { CardBaseProps } from "@/app/components/UI/Card/Card";
 import React, { useState } from "react";
 
 import ArticlesHeading from "./ArticlesHeading";
 import DirectoryPagination from "./DirectoryPagination";
-import Card, { CardBaseProps } from "@/app/components/UI/Card/Card";
 import { client } from "../../../../../../config/sanity";
 
 const ArticlesDirectory = () => {
@@ -64,7 +64,7 @@ const ArticlesDirectory = () => {
         h2Ref={headingRef}
       />
 
-      <div className="customGrid">
+      <div tabIndex={-1} id="articles-directory" className="customGrid">
         {paginatedArticles.map((article) => (
           <Card key={article._id} {...article} />
         ))}
