@@ -1,7 +1,7 @@
 export const dynamic = "force-static";
 
-import Link from "next/link";
 import ButtonLink from "../UI/ButtonLink/ButtonLink";
+import Link from "next/link";
 import React from "react";
 
 const HeaderNav = () => {
@@ -14,7 +14,11 @@ const HeaderNav = () => {
           </Link>
         </li>
         <li className="cursor-not-allowed opacity-50">Sanity CMS</li>
-        <li className="cursor-not-allowed opacity-50">Storybook Doc</li>
+        <li>
+          <Link href="https://68a831750ff5aeab1676d791-tfhusmwkoi.chromatic.com/?path=/docs/ui-buttonlink--docs">
+            Storybook
+          </Link>
+        </li>
         <li>
           <Link href="https://www.pvssy-talk.org">Online Website (V2)</Link>
         </li>

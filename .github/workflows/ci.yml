@@ -97,3 +97,7 @@ jobs:
       - name: Check bundle size
         run: npm run analyze
         working-directory: next
+
+      - name: Publish Storybook to Chromatic
+        run: npx chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+        working-directory: next
