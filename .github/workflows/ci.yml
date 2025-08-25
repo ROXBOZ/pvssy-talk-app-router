@@ -101,3 +101,13 @@ jobs:
       - name: Publish Storybook to Chromatic
         run: npx chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }}
         working-directory: next
+        - name: Fail if SSR/ISR is used
+        run: |
+          if grep -r 'dynamic = \"force-dynamic\"' ./src; then
+            echo "❌ SSR detected!"
+            exit 1
+          fi
+          if grep -r 'dynamic = \"auto\"' ./src; then
+            echo "❌ ISR detected!"
+            exit 1
+          fi

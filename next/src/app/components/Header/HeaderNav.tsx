@@ -20,7 +20,9 @@ const HeaderNav = () => {
           </Link>
         </li>
         <li>
-          <Link href="https://www.pvssy-talk.org">Online Website (V2)</Link>
+          <Link href="https://www.pvssy-talk.org">
+            Online Website <sup>v2</sup>
+          </Link>
         </li>
       </ul>
       <ButtonLink color="secondary" label="Menu" />

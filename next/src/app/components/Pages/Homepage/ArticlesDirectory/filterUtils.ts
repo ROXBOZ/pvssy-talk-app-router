@@ -1,4 +1,3 @@
-// Utility functions for filtering and extracting filters from articles
 export function extractFilters(articles: { filters?: string[] }[]): string[] {
   return Array.from(
     new Set(

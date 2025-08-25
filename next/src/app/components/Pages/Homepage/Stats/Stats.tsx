@@ -1,9 +1,9 @@
+// SSG
 export const dynamic = "force-static";
 
-import React from "react";
-
-import StatsAnimation from "./StatsAnimation";
 import ButtonLink from "@/app/components/UI/ButtonLink/ButtonLink";
+import React from "react";
+import StatsAnimation from "./StatsAnimation";
 import { client } from "../../../../../../config/sanity";
 
 interface Stats {
