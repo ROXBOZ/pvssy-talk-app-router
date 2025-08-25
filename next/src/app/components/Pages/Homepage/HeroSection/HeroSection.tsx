@@ -1,8 +1,8 @@
-import React from "react";
+import HeroButton from "./HeroButton";
 import HeroImage from "./HeroImage";
 import HeroText from "./HeroText";
-import HeroButton from "./HeroButton";
 import { PortableTextBlock } from "@portabletext/react";
+import React from "react";
 
 export interface HeroBlockData {
   title: string;
@@ -38,7 +38,7 @@ const HeroSection: React.FC<{ data: HeroBlockData }> = ({ data }) => {
       <div className="col-span-6 col-start-1 flex items-center lg:col-span-3">
         <div className="flex flex-col gap-4 md:gap-8">
           <div className="flex flex-col gap-4">
-            <h2 className="font-heading text-3xl">{title}</h2>
+            <h2 className="typography__heading text-3xl">{title}</h2>
             <HeroText text={text} />
           </div>
           <HeroButton callToAction={callToAction} />

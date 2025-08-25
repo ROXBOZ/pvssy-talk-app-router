@@ -1,7 +1,6 @@
 export const dynamic = "force-static";
 
 import CustomLink from "../UI/CustomLink/CustomLink";
-import LinkButton from "../UI/LinkButton/LinkButton";
 import React from "react";
 
 const HeaderNav = () => {

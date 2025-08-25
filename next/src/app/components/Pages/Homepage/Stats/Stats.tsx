@@ -26,7 +26,9 @@ export default async function Stats() {
     <div className="customGrid from-primary-300 border-primary-100 to-primary-100 h-[90vh] items-center justify-center border-t bg-gradient-to-b lg:h-[60vh]">
       <div className="col-start-1 col-end-7 flex flex-col items-center gap-4 text-center lg:col-start-3 lg:col-end-5">
         <StatsAnimation />
-        {data.text && <p className="font-heading py-8 text-2xl">{data.text}</p>}
+        {data.text && (
+          <p className="typography__heading py-8 text-2xl">{data.text}</p>
+        )}
         {data.callToAction?.label && (
           <LinkButton
             label={data.callToAction.label}

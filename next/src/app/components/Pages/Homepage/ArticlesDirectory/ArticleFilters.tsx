@@ -24,12 +24,12 @@ const Filter: React.FC<FilterProps> = ({
   };
 
   return (
-    <div className="font-heading flex flex-wrap items-baseline gap-2">
+    <div className="typography__heading flex flex-wrap items-baseline gap-2">
       {filterOptions.map((filter, index) => (
         <span
           key={index}
           onClick={() => handleFilter(filter)}
-          className={`button--glow border-tertiary-400 font-heading active:bg-tertiary-500 cursor-pointer items-baseline gap-2 rounded-full border-2 px-4 py-1 blur-none transition-all duration-200 ${selectedFilter === filter ? "active bg-tertiary-400" : ""}`}
+          className={`button--glow border-tertiary-400 typography__heading active:bg-tertiary-500 cursor-pointer items-baseline gap-2 rounded-full border-2 px-4 py-1 blur-none transition-all duration-200 ${selectedFilter === filter ? "active bg-tertiary-400" : ""}`}
         >
           {filter}
         </span>

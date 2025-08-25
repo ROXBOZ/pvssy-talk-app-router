@@ -15,7 +15,7 @@ const HomeHero = async () => {
       <HeaderBar />
       <div className="customGrid flex flex-1 flex-col items-center justify-center p-4 lg:flex-row">
         <div className="home-hero__gradient col-span-3 h-full w-full" />
-        <h1 className="font-heading col-start-4 col-end-7 flex-1 text-6xl lg:text-8xl">
+        <h1 className="typography__heading col-start-4 col-end-7 flex-1 text-6xl lg:text-8xl">
           {data.tagline}
         </h1>
       </div>

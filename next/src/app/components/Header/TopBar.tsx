@@ -6,7 +6,7 @@ import React from "react";
 const TopBar = async () => {
   return (
     <header className="customGrid items-baseline justify-between p-4">
-      <div className="font-heading text-2xl">
+      <div className="typography__heading text-2xl">
         pvssy&nbsp;talk <sup>v3</sup>
       </div>
       <HeaderNav />

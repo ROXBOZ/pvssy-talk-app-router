@@ -71,7 +71,7 @@ const Card: React.FC<CardBaseProps> = ({
       <div className="flex flex-col p-4">
         <div className="flex items-baseline justify-between gap-2">
           <div>
-            <h3 className="font-heading text-xl">
+            <h3 className="typography__heading text-xl">
               {name || title || "Sans titre"}
             </h3>
           </div>

@@ -30,11 +30,11 @@
   font-display: swap;
 }
 
-.font-heading {
+.typography__heading {
   font-family: "ESRebond", sans-serif;
 }
 
-.font-paragraph {
+.typography__paragraph {
   font-family: "ESKlarheit-Book", sans-serif;
 }
 

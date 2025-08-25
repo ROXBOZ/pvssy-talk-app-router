@@ -56,7 +56,7 @@ const PagesDirectory: React.FC<{ data: PageDirectoryData }> = ({ data }) => {
   return (
     <section>
       <div className="p-4">
-        <h2 className="font-heading text-3xl">{data.title}</h2>
+        <h2 className="typography__heading text-3xl">{data.title}</h2>
       </div>
       <div className="customGrid">
         {cards && cards.length > 0 ? (

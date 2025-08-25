@@ -58,7 +58,7 @@ const ArticlesHeading: React.FC<ArticlesHeadingProps> = ({
   return (
     <div className="customGrid items-baseline py-8">
       <div className="col-start-1 col-end-6 lg:col-end-3">
-        <h2 ref={h2Ref} className="font-heading text-3xl">
+        <h2 ref={h2Ref} className="typography__heading text-3xl">
           {heading.title}
         </h2>
       </div>
