@@ -1,5 +1,5 @@
-import ButtonLink from "../UI/ButtonLink/ButtonLink";
 import HeaderBar from "./TopBar"; // client component
+import LinkButton from "../UI/LinkButton/LinkButton";
 import { client } from "../../../../config/sanity";
 
 interface Tagline {
@@ -20,7 +20,7 @@ const HomeHero = async () => {
         </h1>
       </div>
       <div className="darker flex justify-center p-4">
-        <ButtonLink
+        <LinkButton
           label="Découvrir pvssy talk"
           href="#content"
           color="border"

@@ -1,4 +1,4 @@
-import ButtonLink from "./ButtonLink";
+import LinkButton from "./LinkButton";
 import React from "react";
 
 export const Default = {
@@ -12,13 +12,13 @@ export const Default = {
 };
 
 export default {
-  title: "UI/ButtonLink",
-  component: ButtonLink,
+  title: "UI/LinkButton",
+  component: LinkButton,
   parameters: {
     layout: "centered",
     docs: {
       description: {
-        component: `ButtonLink is a styled component that visually appears as a button but can function as either a button or a link. Use for Links with caution.
+        component: `LinkButton is a styled component that visually appears as a button but can function as either a button or a link. Use for Links with caution.
 [Give feedback on GitHub](https://github.com/ROXBOZ/pvssy-talk-app-router/issues/12)
         `,
       },
@@ -42,7 +42,7 @@ export const Primary = () => {
           alignItems: "center",
         }}
       >
-        <ButtonLink
+        <LinkButton
           label="Default"
           color="primary"
           href="/"
@@ -59,7 +59,7 @@ export const Primary = () => {
           alignItems: "center",
         }}
       >
-        <ButtonLink
+        <LinkButton
           label="Hover"
           color="primary"
           href="/"
@@ -77,7 +77,7 @@ export const Primary = () => {
           alignItems: "center",
         }}
       >
-        <ButtonLink
+        <LinkButton
           label="Active"
           color="primary"
           href="/"
@@ -95,7 +95,7 @@ export const Primary = () => {
           alignItems: "center",
         }}
       >
-        <ButtonLink
+        <LinkButton
           label="Disabled"
           color="primary"
           href="/"
@@ -118,7 +118,7 @@ export const Secondary = () => {
           alignItems: "center",
         }}
       >
-        <ButtonLink label="Default" color="secondary" href="/" />
+        <LinkButton label="Default" color="secondary" href="/" />
         <span style={{ marginTop: 8, fontSize: 12 }}>Default</span>
       </div>
       {/* Hover (simulated with a custom class) */}
@@ -129,7 +129,7 @@ export const Secondary = () => {
           alignItems: "center",
         }}
       >
-        <ButtonLink
+        <LinkButton
           label="Hover"
           color="secondary"
           href="/"
@@ -145,7 +145,7 @@ export const Secondary = () => {
           alignItems: "center",
         }}
       >
-        <ButtonLink
+        <LinkButton
           label="Active"
           color="secondary"
           href="/"
@@ -161,7 +161,7 @@ export const Secondary = () => {
           alignItems: "center",
         }}
       >
-        <ButtonLink label="Disabled" color="secondary" href="/" disabled />
+        <LinkButton label="Disabled" color="secondary" href="/" disabled />
         <span style={{ marginTop: 8, fontSize: 12 }}>Disabled</span>
       </div>
     </div>
@@ -177,7 +177,7 @@ export const Border = () => {
           alignItems: "center",
         }}
       >
-        <ButtonLink
+        <LinkButton
           label="Default"
           color="border"
           href="/"
@@ -194,7 +194,7 @@ export const Border = () => {
           alignItems: "center",
         }}
       >
-        <ButtonLink
+        <LinkButton
           label="Hover"
           color="border"
           href="/"
@@ -212,7 +212,7 @@ export const Border = () => {
           alignItems: "center",
         }}
       >
-        <ButtonLink
+        <LinkButton
           label="Active"
           color="border"
           href="/"
@@ -230,7 +230,7 @@ export const Border = () => {
           alignItems: "center",
         }}
       >
-        <ButtonLink
+        <LinkButton
           label="Disabled"
           color="border"
           href="/"

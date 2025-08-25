@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-type ButtonLinkProps = {
+type LinkButtonProps = {
   hasArrow?: boolean;
   arrowDirection?: "right" | "left" | "bottom";
   label: string;
@@ -13,7 +13,7 @@ type ButtonLinkProps = {
   className?: string;
 };
 
-const ButtonLink: React.FC<ButtonLinkProps> = ({
+const LinkButton: React.FC<LinkButtonProps> = ({
   hasArrow,
   arrowDirection,
   label,
@@ -24,7 +24,6 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
   type,
   className,
 }) => {
-  // If no valid href or onClick, force disabled
   const isDisabled = disabled || (!href && typeof onClick !== "function");
   const baseClasses =
     "whitespace-nowrap! whitespace group flex h-fit w-fit items-center gap-2 rounded-full px-6 py-2 font-semibold ring-inset";
@@ -109,4 +108,4 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
   );
 };
 
-export default ButtonLink;
+export default LinkButton;

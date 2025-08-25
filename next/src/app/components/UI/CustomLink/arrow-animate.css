@@ -1,0 +1,10 @@
+.arrow-animate {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.underline-animate:hover .arrow-animate,
+.underline-animate:focus .arrow-animate {
+  transform: translate(4px, -4px);
+}

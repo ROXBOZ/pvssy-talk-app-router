@@ -46,9 +46,14 @@
   hyphens: auto;
 }
 
+h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p,
+ul,
 span,
 a {
   @apply max-w-[65ch];

@@ -1,7 +1,7 @@
 export const dynamic = "force-static";
 
-import ButtonLink from "../UI/ButtonLink/ButtonLink";
-import Link from "next/link";
+import CustomLink from "../UI/CustomLink/CustomLink";
+import LinkButton from "../UI/LinkButton/LinkButton";
 import React from "react";
 
 const HeaderNav = () => {
@@ -9,23 +9,23 @@ const HeaderNav = () => {
     <nav className="col-start-4 col-end-7 hidden items-baseline justify-between md:flex">
       <ul className="flex gap-12">
         <li>
-          <Link href="https://github.com/ROXBOZ/pvssy-talk-app-router">
+          <CustomLink href="https://github.com/ROXBOZ/pvssy-talk-app-router">
             GitHub Repo
-          </Link>
+          </CustomLink>
         </li>
         <li className="cursor-not-allowed opacity-50">Sanity CMS</li>
         <li>
-          <Link href="https://68a831750ff5aeab1676d791-tfhusmwkoi.chromatic.com/?path=/docs/ui-buttonlink--docs">
+          <CustomLink href="https://68a831750ff5aeab1676d791-tfhusmwkoi.chromatic.com/?path=/docs/ui-LinkButton--docs">
             Storybook
-          </Link>
+          </CustomLink>
         </li>
         <li>
-          <Link href="https://www.pvssy-talk.org">
+          <CustomLink href="https://www.pvssy-talk.org">
             Online Website <sup>v2</sup>
-          </Link>
+          </CustomLink>
         </li>
       </ul>
-      <ButtonLink color="secondary" label="Menu" />
+      {/* <LinkButton color="secondary" label="Menu" /> */}
       {/* {headerMenu && (
         <ul className="flex gap-24">
           {headerMenu
@@ -35,7 +35,7 @@ const HeaderNav = () => {
             ))}
         </ul>
       )}
-      <ButtonLink
+      <LinkButton
         color="secondary"
         href=""
         label="Participer"

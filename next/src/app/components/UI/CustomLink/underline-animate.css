@@ -1,0 +1,21 @@
+.underline-animate {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-animate__line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--color-primary-700);
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.underline-animate:hover .underline-animate__line,
+.underline-animate:focus .underline-animate__line {
+  transform: scaleX(0);
+}
