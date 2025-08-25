@@ -1,7 +1,7 @@
 import Image from "next/image";
+import LinkButton from "../LinkButton/LinkButton";
 import React from "react";
 import { urlFor } from "../../../../../config/sanity";
-import ButtonLink from "../ButtonLink/ButtonLink";
 
 export interface CardBaseProps {
   _id?: string;
@@ -75,7 +75,7 @@ const Card: React.FC<CardBaseProps> = ({
               {name || title || "Sans titre"}
             </h3>
           </div>
-          <ButtonLink
+          <LinkButton
             hasArrow={true}
             label={label || "Lire"}
             href=""

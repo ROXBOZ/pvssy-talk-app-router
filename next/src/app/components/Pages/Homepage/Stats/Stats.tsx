@@ -1,7 +1,7 @@
 // SSG
 export const dynamic = "force-static";
 
-import ButtonLink from "@/app/components/UI/ButtonLink/ButtonLink";
+import LinkButton from "@/app/components/UI/LinkButton/LinkButton";
 import React from "react";
 import StatsAnimation from "./StatsAnimation";
 import { client } from "../../../../../../config/sanity";
@@ -28,7 +28,7 @@ export default async function Stats() {
         <StatsAnimation />
         {data.text && <p className="font-heading py-8 text-2xl">{data.text}</p>}
         {data.callToAction?.label && (
-          <ButtonLink
+          <LinkButton
             label={data.callToAction.label}
             href=""
             // href={`/${data.callToAction.link?.slug?.current ?? ""}`}
