@@ -1,9 +1,8 @@
 import "./styles/globals.css";
 
+import CustomLink from "./components/UI/CustomLink/CustomLink";
 import Footer from "./components/Footer/Footer";
-
 import HomeHero from "./components/Header/HomeHero";
-import ButtonLink from "./components/UI/ButtonLink/ButtonLink";
 
 export const metadata = {
   title: "pvssy talk version 3 is a demo for coding best practices",
@@ -20,11 +19,9 @@ export default async function RootLayout({
         <HomeHero />
         <main>{children}</main>
         <div className="flex justify-center pt-24">
-          <ButtonLink
-            label="Retour aux articles"
-            color="primary"
-            href="#articles-directory"
-          />
+          <CustomLink href="#articles-directory">
+            Retour aux articles
+          </CustomLink>
         </div>
         <Footer />
       </body>
