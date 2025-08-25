@@ -2,6 +2,7 @@ import Image from "next/image";
 import LinkButton from "../LinkButton/LinkButton";
 import React from "react";
 import { urlFor } from "../../../../../config/sanity";
+import { CardBaseProps } from "./Card.types";
 
 const Card: React.FC<CardBaseProps> = ({
   name,

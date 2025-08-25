@@ -1,1 +1,0 @@
-type MenuGridProps = { items: string[] };

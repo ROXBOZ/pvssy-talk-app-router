@@ -1,13 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
-import type { HeroBlockData } from "./HeroSection";
 import { urlFor } from "../../../../../../config/sanity";
-
-interface HeroImageProps {
-  figure?: HeroBlockData["figure"];
-  title: string;
-}
+import { HeroImageProps } from "./HeroSection.types";
 
 const HeroImage: React.FC<HeroImageProps> = ({ figure, title }) => {
   const imageAsset = figure?.image?.asset;

@@ -1,4 +1,4 @@
-type LinkButtonProps = {
+export type LinkButtonProps = {
   hasArrow?: boolean;
   arrowDirection?: "right" | "left" | "bottom";
   label: string;

@@ -1,10 +1,6 @@
-import type { HeroBlockData } from "./HeroSection";
 import LinkButton from "@/app/components/UI/LinkButton/LinkButton";
 import React from "react";
-
-interface HeroButtonProps {
-  callToAction?: HeroBlockData["callToAction"];
-}
+import { HeroButtonProps } from "./HeroSection.types";
 
 const HeroButton: React.FC<HeroButtonProps> = ({ callToAction }) => {
   if (!callToAction) return null;

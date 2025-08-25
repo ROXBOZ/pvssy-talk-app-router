@@ -8,7 +8,8 @@ jest.mock("@sanity/image-url", () => () => ({
 }));
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import HeroSection, { HeroBlockData } from "./HeroSection";
+import { HeroBlockData } from "./HeroSection.types";
+import HeroSection from "./HeroSection";
 
 const baseData: HeroBlockData = {
   title: "Test Title",

@@ -1,33 +1,8 @@
-import HeroButton from "./HeroButton";
-import HeroImage from "./HeroImage";
-import HeroText from "./HeroText";
-import { PortableTextBlock } from "@portabletext/react";
+import HeroButton from "./HeroSection-button";
+import HeroImage from "./HeroSection-image";
+import { HeroBlockData } from "./HeroSection.types";
+import HeroText from "./HeroSection-text";
 import React from "react";
-
-export interface HeroBlockData {
-  title: string;
-  text: string | PortableTextBlock[];
-  figure?: {
-    altText?: string;
-    image?: {
-      asset?: { _ref?: string; _id?: string };
-      alt?: string;
-    };
-  };
-  callToAction?: {
-    label: string;
-    href?: string;
-    linkRef?: {
-      _id: string;
-      _type: string;
-      title?: string;
-      slug?: { current: string };
-    } | null;
-    linkRes?: string;
-    linkType?: string;
-    onClick?: () => void;
-  };
-}
 
 const HeroSection: React.FC<{ data: HeroBlockData }> = ({ data }) => {
   if (!data) return null;

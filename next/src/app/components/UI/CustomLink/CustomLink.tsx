@@ -1,5 +1,4 @@
-import "./underline-animate.css";
-import "./arrow-animate.css";
+import "./customLink.css";
 
 import Link from "next/link";
 import React from "react";

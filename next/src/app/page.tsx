@@ -1,13 +1,11 @@
-import HeroSection, {
-  HeroBlockData,
-} from "./components/Pages/Homepage/HeroSection/HeroSection";
-import PagesDirectory, {
-  PageDirectoryData,
-} from "./components/Pages/Homepage/PagesDirectory";
+import HeroSection from "./components/Pages/Homepage/HeroSection/HeroSection";
 
 import ArticlesDirectory from "./components/Pages/Homepage/ArticlesDirectory/ArticlesDirectory";
 import Stats from "./components/Pages/Homepage/Stats/Stats";
 import { client } from "../../config/sanity";
+import PagesDirectory from "./components/Pages/Homepage/PagesDirectory/PagesDirectory";
+import { PageDirectoryData } from "./components/Pages/Homepage/PagesDirectory/PageDirectory.types";
+import { HeroBlockData } from "./components/Pages/Homepage/HeroSection/HeroSection.types";
 
 interface HomeContent {
   _type: string;
