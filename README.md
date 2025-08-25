@@ -1,13 +1,10 @@
 # pvssy talk – Website Remake (V3)
 
-pvssy-talk-app is a partial remake (V3) of [www.pvssy-talk.org](https://www.pvssy-talk.org), a real project developed for a client, this time using **Next.js App Router**, TypeScript, Tailwind CSS, **Sass** (for animation and complex UI), Sanity CMS, Jest, Storybook, GSAP and more.
+pvssy-talk-app is a partial remake (V3) of [www.pvssy-talk.org](https://www.pvssy-talk.org), this time using **Next.js App Router**, TypeScript, Tailwind CSS, **Sass** (for animation and complex UI), Sanity CMS, Jest, Storybook, GSAP and more.
 
 The goal is to demonstrate **management of Data Fetching in App Router, best practices, senior accessibility practices, disciplined testing, CI/CD and GitHub workflows, Storybook (...)**, while improving usability and design over previous versions.
 
-> **Note:** pvssy talk is a Sex Ed project by Anne-Soorya Takoordyal. I developed the V1 with the MERN (MongoDB, Express, React, Node.js) stack as my graduation project at the Code Academy Berlin in 2023, and the V2 with the JAMStack Next.js, TypeScript, Sanity CMS as a freelancer in 2023-2024. The V2 version is currently online at [pvssy-talk.org](https://pvssy-talk.org). V3 is a demo project and is not meant to be a complete.
-
-⚠️ SANITY PREVIEW CMS : xx
-⚠️ STORYBOOK UI : xx
+> Note: **pvssy talk** is a sex education project by the No Dolor Association. I developed Version 1 using the MERN stack (MongoDB, Express, React, Node.js) as my graduation project at the Code Academy Berlin in 2023. Shortly after, I developed Version 2 with the JAMstack using Next.js, TypeScript, and Sanity CMS as a freelancer (2023-2024). The V2 site is currently live at pvssy-talk.org. Version 3 is a demo project and is not meant to be a complete application.
 
 
 
