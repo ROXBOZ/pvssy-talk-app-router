@@ -4,11 +4,16 @@ export const dynamic = "force-static";
 import React, { useState } from "react";
 
 import CustomLink from "../UI/CustomLink/CustomLink";
-import HeaderMenu from "./HeaderMenu";
+import HeaderMenu from "./HeaderMenu/HeaderMenu";
 import LinkButton from "../UI/LinkButton/LinkButton";
 
 const HeaderNav = () => {
   const [showMenu, setShowMenu] = useState(false);
+
+  const handleMenuToggle = () => {
+    setShowMenu((prev) => !prev);
+  };
+
   return (
     <nav className="col-start-4 col-end-7 hidden items-center justify-between md:flex">
       <ul className="flex gap-12">
@@ -33,12 +38,10 @@ const HeaderNav = () => {
         <LinkButton
           color="secondary"
           label={showMenu ? "Fermer" : "Menu"}
-          onClick={() => {
-            setShowMenu(!showMenu);
-          }}
+          onClick={handleMenuToggle}
         />
       </div>
-      {showMenu && <HeaderMenu />}
+      <HeaderMenu open={showMenu} />
     </nav>
   );
 };
