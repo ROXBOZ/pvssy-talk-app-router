@@ -1,6 +1,6 @@
-import React from "react";
 import type { HeroBlockData } from "./HeroSection";
-import ButtonLink from "@/app/components/UI/ButtonLink/ButtonLink";
+import LinkButton from "@/app/components/UI/LinkButton/LinkButton";
+import React from "react";
 
 interface HeroButtonProps {
   callToAction?: HeroBlockData["callToAction"];
@@ -18,7 +18,7 @@ const HeroButton: React.FC<HeroButtonProps> = ({ callToAction }) => {
   if (!callToAction.label) return null;
   // If href is present, render as link; else as button
   return (
-    <ButtonLink
+    <LinkButton
       hasArrow={true}
       label={callToAction.label}
       href={buttonHref}
