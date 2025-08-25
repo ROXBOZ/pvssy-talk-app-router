@@ -15,6 +15,12 @@ const Card: React.FC<CardBaseProps> = ({
     mainImage && mainImage.asset && mainImage.asset._ref
       ? urlFor(mainImage.asset._ref).url()
       : null;
+
+  // Optional: support for blurDataURL if available in mainImage
+  const blurDataURL =
+    mainImage && typeof mainImage.blurDataURL === "string"
+      ? mainImage.blurDataURL
+      : undefined;
   //
   return (
     <div className="border-primary-100 group hover:bg-primary-100 bg-background col-span-6 w-full overflow-hidden rounded-2xl border-2 transition-colors duration-200 hover:cursor-pointer lg:col-span-2">
@@ -40,6 +46,9 @@ const Card: React.FC<CardBaseProps> = ({
                 height={500}
                 alt={name || ""}
                 className="transition-transform delay-200 duration-200 group-hover:scale-[102%]"
+                placeholder={blurDataURL ? "blur" : "empty"}
+                blurDataURL={blurDataURL}
+                priority
               />
             </div>
           ) : (

@@ -3,7 +3,7 @@ export const dynamic = "force-static";
 
 import LinkButton from "@/app/components/UI/LinkButton/LinkButton";
 import React from "react";
-import StatsAnimation from "./Stats-animation";
+import StatsAnimation from "./Stats__animation";
 import { client } from "../../../../../../config/sanity";
 
 interface Stats {

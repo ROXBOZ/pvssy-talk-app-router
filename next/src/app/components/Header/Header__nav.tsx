@@ -4,7 +4,7 @@ export const dynamic = "force-static";
 import React, { useState } from "react";
 
 import CustomLink from "../UI/CustomLink/CustomLink";
-import HeaderMenu from "./Header-menu/Header-menu";
+import HeaderMenu from "./Header-menu/Header__menu";
 import LinkButton from "../UI/LinkButton/LinkButton";
 
 const HeaderNav = () => {

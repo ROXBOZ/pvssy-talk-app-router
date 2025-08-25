@@ -2,7 +2,7 @@ import { Article } from "./ArticlesDirectory.types";
 import {
   extractFilters,
   filterArticles,
-} from "./ArticlesDirectory-filters-utils";
+} from "./ArticlesDirectory__filters-utils";
 
 describe("Article Directory Filtering", () => {
   const articles: Article[] = [

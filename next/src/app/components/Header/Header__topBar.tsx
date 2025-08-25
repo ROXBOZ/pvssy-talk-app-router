@@ -1,6 +1,6 @@
 export const dynamic = "force-static";
 
-import HeaderNav from "./Header-nav";
+import HeaderNav from "./Header__nav";
 import React from "react";
 
 const TopBar = async () => {

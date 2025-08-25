@@ -2,7 +2,7 @@ import "./styles/globals.css";
 
 import CustomLink from "./components/UI/CustomLink/CustomLink";
 import Footer from "./components/Footer/Footer";
-import HomeHero from "./components/Header/Header-hero";
+import HomeHero from "./components/Header/Header__hero";
 
 export const metadata = {
   title: "pvssy talk version 3 is a demo for coding best practices",

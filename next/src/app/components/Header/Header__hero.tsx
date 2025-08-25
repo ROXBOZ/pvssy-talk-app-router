@@ -1,4 +1,4 @@
-import HeaderBar from "./TopBar"; // client component
+import HeaderBar from "./Header__topBar"; // client component
 
 import { client } from "../../../../config/sanity";
 import LinkButton from "../UI/LinkButton/LinkButton";

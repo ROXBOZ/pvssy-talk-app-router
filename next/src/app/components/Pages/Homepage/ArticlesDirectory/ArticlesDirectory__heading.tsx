@@ -1,6 +1,6 @@
 "use client";
 
-import Filter from "./ArticlesDirectory-filter";
+import Filter from "./ArticlesDirectory__filter";
 import { PortableText } from "@portabletext/react";
 
 import React from "react";

@@ -1,6 +1,6 @@
-import FooterNav from "./Footer-nav";
+import FooterNav from "./Footer__nav";
 import React from "react";
-import Sponsors from "./Footer-sponsors";
+import Sponsors from "./Footer__sponsors";
 
 function Footer() {
   return (

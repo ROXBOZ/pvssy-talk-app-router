@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 
-import ArticlesHeading from "./ArticlesDirectory-heading";
-import DirectoryPagination from "./ArticlesDirectory-pagination";
+import ArticlesHeading from "./ArticlesDirectory__heading";
+import DirectoryPagination from "./ArticlesDirectory__pagination";
 import { client } from "../../../../../../config/sanity";
 import { CardBaseProps } from "@/app/components/UI/Card/Card.types";
 import Card from "@/app/components/UI/Card/Card";
