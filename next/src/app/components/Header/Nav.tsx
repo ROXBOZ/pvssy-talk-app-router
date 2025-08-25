@@ -15,7 +15,7 @@ const HeaderNav = () => {
   };
 
   return (
-    <nav className="col-start-4 col-end-7 hidden items-center justify-between md:flex">
+    <nav className="col-start-4 col-end-7 hidden items-center justify-between 2xl:flex">
       <ul className="flex gap-12">
         <li>
           <CustomLink href="https://github.com/ROXBOZ/pvssy-talk-app-router">
