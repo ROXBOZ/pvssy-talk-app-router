@@ -1,11 +1,6 @@
 import LinkButton from "@/app/components/UI/LinkButton/LinkButton";
 import React from "react";
-
-interface DirectoryPaginationProps {
-  page: number;
-  totalPages: number;
-  setPage: (page: number) => void;
-}
+import { DirectoryPaginationProps } from "./ArticlesDirectory.types";
 
 const DirectoryPagination: React.FC<DirectoryPaginationProps> = ({
   page,

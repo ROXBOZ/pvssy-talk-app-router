@@ -34,7 +34,7 @@ const HeaderNav = () => {
           </CustomLink>
         </li>
       </ul>
-      <div className="z-50">
+      <div className="fixed top-3 right-3 z-50">
         <LinkButton
           color="secondary"
           label={showMenu ? "Fermer" : "Menu"}

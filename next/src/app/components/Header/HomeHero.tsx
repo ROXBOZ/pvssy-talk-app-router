@@ -1,6 +1,7 @@
 import HeaderBar from "./TopBar"; // client component
-import LinkButton from "../UI/LinkButton/LinkButton";
+
 import { client } from "../../../../config/sanity";
+import LinkButton from "../UI/LinkButton/LinkButton";
 
 interface Tagline {
   tagline?: string;

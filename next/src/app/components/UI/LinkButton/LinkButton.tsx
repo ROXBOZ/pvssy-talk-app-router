@@ -2,18 +2,6 @@ import Link from "next/link";
 import React from "react";
 import BurgerIcon from "../../Header/HeaderMenu/BurgerIcon";
 
-type LinkButtonProps = {
-  hasArrow?: boolean;
-  arrowDirection?: "right" | "left" | "bottom";
-  label: string;
-  href?: string;
-  color: "primary" | "secondary" | "border";
-  onClick?: () => void;
-  disabled?: boolean;
-  type?: "button" | "submit";
-  className?: string;
-};
-
 const LinkButton: React.FC<LinkButtonProps> = ({
   hasArrow,
   arrowDirection,
@@ -32,7 +20,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({
     "whitespace-nowrap! whitespace group flex h-fit w-fit items-center gap-2 rounded-full px-6 py-2 font-semibold ring-inset";
   const hoverClasses = isDisabled
     ? ""
-    : "hover:ring-2 hover:delay-200 hover:duration-200";
+    : "hover:ring-2 hover:delay-0 hover:duration-200";
   const colorClasses =
     color === "primary"
       ? "bg-primary-300 ring-primary-400 active:bg-primary-400"

@@ -1,10 +1,5 @@
 import React from "react";
-
-export interface FilterProps {
-  filterOptions: string[];
-  selectedFilter: string | null;
-  setSelectedFilter: (filter: string | null) => void;
-}
+import { FilterProps } from "./ArticlesDirectory.types";
 
 const Filter: React.FC<FilterProps> = ({
   filterOptions,

@@ -43,3 +43,9 @@ body {
 section {
   @apply px-4;
 }
+
+/* Prevent body scroll when menu is open */
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
+}

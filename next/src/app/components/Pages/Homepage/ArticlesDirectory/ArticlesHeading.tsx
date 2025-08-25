@@ -2,21 +2,10 @@
 
 import Filter from "./ArticleFilters";
 import { PortableText } from "@portabletext/react";
-import type { PortableTextBlock } from "@portabletext/types";
+
 import React from "react";
 import { useSanityFetch } from "@/app/hooks/useSanityFetch";
-
-interface ArticlesHeadingProps {
-  filters: string[];
-  selectedFilter: string | null;
-  setSelectedFilter: (filter: string | null) => void;
-  h2Ref?: React.RefObject<HTMLHeadingElement>;
-}
-
-interface HeadingData {
-  title: string;
-  text: PortableTextBlock[];
-}
+import { ArticlesHeadingProps, HeadingData } from "./ArticlesDirectory.types";
 
 const ArticlesHeading: React.FC<ArticlesHeadingProps> = ({
   filters,
