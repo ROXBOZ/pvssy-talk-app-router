@@ -9,7 +9,7 @@ import { useSanityFetch } from "@/app/hooks/useSanityFetch";
 interface ArticlesHeadingProps {
   filters: string[];
   selectedFilter: string | null;
-  setSelectedFilter: React.Dispatch<React.SetStateAction<string | null>>;
+  setSelectedFilter: (filter: string | null) => void;
   h2Ref?: React.RefObject<HTMLHeadingElement>;
 }
 

@@ -14,6 +14,11 @@ const ArticlesDirectory = () => {
   const [articles, setArticles] = useState<CardBaseProps[] | null>(null);
   const [selectedFilter, setSelectedFilter] = useState<string | null>(null);
   const [page, setPage] = useState(0);
+
+  const handleSetSelectedFilter = (filter: string | null) => {
+    setSelectedFilter(filter);
+    setPage(0);
+  };
   const PAGE_SIZE = 6;
 
   React.useEffect(() => {
@@ -60,7 +65,7 @@ const ArticlesDirectory = () => {
       <ArticlesHeading
         filters={filters}
         selectedFilter={selectedFilter}
-        setSelectedFilter={setSelectedFilter}
+        setSelectedFilter={handleSetSelectedFilter}
         h2Ref={headingRef}
       />
 

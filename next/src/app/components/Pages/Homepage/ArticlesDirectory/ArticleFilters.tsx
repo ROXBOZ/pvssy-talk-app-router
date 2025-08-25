@@ -3,7 +3,7 @@ import React from "react";
 export interface FilterProps {
   filterOptions: string[];
   selectedFilter: string | null;
-  setSelectedFilter: React.Dispatch<React.SetStateAction<string | null>>;
+  setSelectedFilter: (filter: string | null) => void;
 }
 
 const Filter: React.FC<FilterProps> = ({
@@ -12,7 +12,11 @@ const Filter: React.FC<FilterProps> = ({
   setSelectedFilter,
 }) => {
   const handleFilter = (filter: string) => {
-    setSelectedFilter((prevFilter) => (prevFilter === filter ? null : filter));
+    if (selectedFilter === filter) {
+      setSelectedFilter(null);
+    } else {
+      setSelectedFilter(filter);
+    }
   };
 
   const handleReset = () => {
