@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "ci-check": "cd next && npm run lint && npm run prettier:check && npm run build && npm test && npm run type-check",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
