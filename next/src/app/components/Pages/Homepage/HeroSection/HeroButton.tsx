@@ -14,9 +14,9 @@ const HeroButton: React.FC<HeroButtonProps> = ({ callToAction }) => {
   } else if (callToAction.linkRes) {
     buttonHref = `/${callToAction.linkRes}`;
   }
-  // If no label, don't render
+
   if (!callToAction.label) return null;
-  // If href is present, render as link; else as button
+
   return (
     <LinkButton
       hasArrow={true}
