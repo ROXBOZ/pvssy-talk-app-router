@@ -24,7 +24,8 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   type,
   className,
 }) => {
-  const isDisabled = disabled || (!href && typeof onClick !== "function");
+  const isDisabled = disabled || (!href && !onClick);
+
   const baseClasses =
     "whitespace-nowrap! whitespace group flex h-fit w-fit items-center gap-2 rounded-full px-6 py-2 font-semibold ring-inset";
   const hoverClasses = isDisabled
@@ -56,6 +57,8 @@ const LinkButton: React.FC<LinkButtonProps> = ({
     bottom: "group-hover:translate-y-1",
   };
 
+  const isMenuButton = label.toLocaleLowerCase().includes("menu");
+
   if (href) {
     return (
       <Link
@@ -71,6 +74,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({
             {arrowMap[arrowDirection as string] || "←"}
           </span>
         )}
+        {isMenuButton && <span className="mx-1 text-lg font-bold">≡</span>}
         {label}
         {hasArrow && arrowDirection !== "left" && (
           <span
@@ -95,6 +99,13 @@ const LinkButton: React.FC<LinkButtonProps> = ({
         >
           {arrowMap[arrowDirection as string] || "←"}
         </span>
+      )}
+      {isMenuButton && (
+        <div className="*:bg-primary-950 flex flex-col gap-1 *:h-[1.5px] *:w-[20px]">
+          <div />
+          <div />
+          <div />
+        </div>
       )}
       {label}
       {hasArrow && arrowDirection !== "left" && (

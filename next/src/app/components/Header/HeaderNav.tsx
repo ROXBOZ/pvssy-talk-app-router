@@ -1,11 +1,16 @@
+"use client";
 export const dynamic = "force-static";
 
+import React, { useState } from "react";
+
 import CustomLink from "../UI/CustomLink/CustomLink";
-import React from "react";
+import HeaderMenu from "./HeaderMenu";
+import LinkButton from "../UI/LinkButton/LinkButton";
 
 const HeaderNav = () => {
+  const [showMenu, setShowMenu] = useState(false);
   return (
-    <nav className="col-start-4 col-end-7 hidden items-baseline justify-between md:flex">
+    <nav className="col-start-4 col-end-7 hidden items-center justify-between md:flex">
       <ul className="flex gap-12">
         <li>
           <CustomLink href="https://github.com/ROXBOZ/pvssy-talk-app-router">
@@ -24,22 +29,16 @@ const HeaderNav = () => {
           </CustomLink>
         </li>
       </ul>
-      {/* <LinkButton color="secondary" label="Menu" /> */}
-      {/* {headerMenu && (
-        <ul className="flex gap-24">
-          {headerMenu
-            .filter((item) => item.title)
-            .map((item, idx) => (
-              <li key={idx}>{item.title}</li>
-            ))}
-        </ul>
-      )}
-      <LinkButton
-        color="secondary"
-        href=""
-        label="Participer"
-        hasArrow={false}
-      /> */}
+      <div className="z-50">
+        <LinkButton
+          color="secondary"
+          label={showMenu ? "Fermer" : "Menu"}
+          onClick={() => {
+            setShowMenu(!showMenu);
+          }}
+        />
+      </div>
+      {showMenu && <HeaderMenu />}
     </nav>
   );
 };
