@@ -20,9 +20,11 @@ const MenuGrid: React.FC<MenuGridProps> = ({ items }) => {
   return (
     <div className="divide-primary-400 grid h-full w-full grid-cols-4 gap-4 divide-x">
       {items.map((item, idx) => (
-        <span key={idx} className="typography__heading text-xl font-semibold">
-          {item}
-        </span>
+        <div key={idx} className="flex flex-col gap-2">
+          <span className="typography__heading text-xl font-semibold">
+            {item}
+          </span>
+        </div>
       ))}
     </div>
   );
@@ -83,7 +85,7 @@ function HeaderMenu({ open = true }: { open?: boolean }) {
   if (!visible) return null;
 
   return (
-    <div className="bg-primary-400/80 fixed inset-0 z-40 h-screen w-screen p-24">
+    <div className="bg-primary-400/95 fixed inset-0 z-40 h-screen w-screen p-24">
       <div
         ref={bgRef}
         className="bg-background relative flex h-full w-full origin-top-right transform flex-col rounded-xl p-4"
@@ -93,7 +95,7 @@ function HeaderMenu({ open = true }: { open?: boolean }) {
             <LinkButton
               key={menu.id}
               label={menu.label}
-              color={picked === menu.id ? "secondary" : "primary"}
+              color="primary"
               onClick={() => setPicked(menu.id)}
             />
           ))}
