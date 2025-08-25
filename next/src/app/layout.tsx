@@ -6,6 +6,8 @@ import HomeHero from "./components/Header/Hero";
 
 export const metadata = {
   title: "pvssy talk version 3 is a demo for coding best practices",
+  description:
+    "Explore the best practices in coding with pvssy talk version 3.",
 };
 
 export default async function RootLayout({

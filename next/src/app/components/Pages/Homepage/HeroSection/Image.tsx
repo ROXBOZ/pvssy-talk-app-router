@@ -1,18 +1,13 @@
 import React from "react";
 import Image from "next/image";
 
-import { urlFor } from "../../../../../../config/sanity";
+import { useSanityImageUrl } from "../../../../../../config/sanity";
 import { HeroImageProps } from "./HeroSection.types";
 
 const HeroImage: React.FC<HeroImageProps> = ({ figure, title }) => {
   const imageAsset = figure?.image?.asset;
-  let imageSrc: string | null = null;
-  if (imageAsset) {
-    const refOrId = imageAsset._ref || imageAsset._id;
-    if (typeof refOrId === "string") {
-      imageSrc = urlFor(refOrId).url();
-    }
-  }
+  const refOrId = imageAsset?._ref || imageAsset?._id;
+  const imageSrc = useSanityImageUrl(refOrId);
   const imageAlt = figure?.altText || figure?.image?.alt || title || "";
 
   if (!imageSrc) {

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import LinkButton from "../LinkButton";
 import React from "react";
-import { urlFor } from "../../../../../config/sanity";
+import { useSanityImageUrl } from "../../../../../config/sanity";
 import { CardBaseProps } from "./Card.types";
 
 const Card: React.FC<CardBaseProps> = ({
@@ -11,12 +11,11 @@ const Card: React.FC<CardBaseProps> = ({
   mainImage,
   filters,
 }) => {
-  const imageUrl =
-    mainImage && mainImage.asset && mainImage.asset._ref
-      ? urlFor(mainImage.asset._ref).url()
-      : null;
+  const imageUrl = useSanityImageUrl(
+    mainImage && mainImage.asset && mainImage.asset._ref,
+    { width: 800, height: 500, quality: 75 },
+  );
 
-  // Optional: support for blurDataURL if available in mainImage
   const blurDataURL =
     mainImage && typeof mainImage.blurDataURL === "string"
       ? mainImage.blurDataURL
