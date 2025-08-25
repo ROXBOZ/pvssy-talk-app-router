@@ -17,7 +17,6 @@ const Card: React.FC<CardBaseProps> = ({
       ? urlFor(mainImage.asset._ref).url()
       : null;
 
-  // Optional: support for blurDataURL if available in mainImage
   const blurDataURL =
     mainImage && typeof mainImage.blurDataURL === "string"
       ? mainImage.blurDataURL
