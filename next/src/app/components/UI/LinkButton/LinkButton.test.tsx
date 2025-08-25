@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 
-import LinkButton from "./LinkButton";
+import LinkButton from ".";
 import { render } from "@testing-library/react";
 
 describe("LinkButton", () => {

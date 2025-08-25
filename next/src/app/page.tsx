@@ -1,10 +1,10 @@
-import HeroSection from "./components/Pages/Homepage/HeroSection/HeroSection";
+import HeroSection from "./components/Pages/Homepage/HeroSection";
 
-import ArticlesDirectory from "./components/Pages/Homepage/ArticlesDirectory/ArticlesDirectory";
-import Stats from "./components/Pages/Homepage/Stats/Stats";
+import ArticlesDirectory from "./components/Pages/Homepage/ArticlesDirectory";
+import Stats from "./components/Pages/Homepage/Stats";
 import { client } from "../../config/sanity";
-import PagesDirectory from "./components/Pages/Homepage/PagesDirectory/PagesDirectory";
-import { PageDirectoryData } from "./components/Pages/Homepage/PagesDirectory/PageDirectory.types";
+import PagesDirectory from "./components/Pages/Homepage/PagesDirectory";
+import { PageDirectoryData } from "./components/Pages/Homepage/PagesDirectory/PagesDirectory.types";
 import { HeroBlockData } from "./components/Pages/Homepage/HeroSection/HeroSection.types";
 
 interface HomeContent {

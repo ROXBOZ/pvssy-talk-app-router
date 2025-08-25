@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import BurgerIcon from "../../Header/Header-menu/Header__menu__burgerIcon";
+import BurgerIcon from "../../Header/Menu/BurgerIcon";
 import { LinkButtonProps } from "./LinkButton.types";
 
 const LinkButton: React.FC<LinkButtonProps> = ({
@@ -34,6 +34,13 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   const disabledLinkClasses = isDisabled
     ? "cursor-not-allowed opacity-50"
     : "cursor-pointer";
+
+  // const isActive =
+  //   color === "primary"
+  //     ? "bg-primary-400"
+  //     : color === "secondary"
+  //       ? "bg-secondary-300"
+  //       : "bg-primary-300";
 
   const arrowMap: Record<string, string> = {
     right: "→",

@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 
-import ArticlesHeading from "./ArticlesDirectory__heading";
-import DirectoryPagination from "./ArticlesDirectory__pagination";
+import ArticlesHeading from "./Heading";
+import DirectoryPagination from "./Pagination";
 import { client } from "../../../../../../config/sanity";
 import { CardBaseProps } from "@/app/components/UI/Card/Card.types";
-import Card from "@/app/components/UI/Card/Card";
+import Card from "@/app/components/UI/Card";
 
 const ArticlesDirectory = () => {
   const headingRef = React.useRef<HTMLHeadingElement>(

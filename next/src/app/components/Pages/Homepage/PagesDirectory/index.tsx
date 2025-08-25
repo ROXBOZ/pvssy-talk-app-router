@@ -1,6 +1,6 @@
-import Card from "../../../UI/Card/Card";
+import Card from "../../../UI/Card";
 import React from "react";
-import { PageDirectoryData } from "./PageDirectory.types";
+import { PageDirectoryData } from "./PagesDirectory.types";
 
 const PagesDirectory: React.FC<{ data: PageDirectoryData }> = ({ data }) => {
   const cards = data.cards.map((card) => {

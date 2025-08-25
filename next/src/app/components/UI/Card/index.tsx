@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LinkButton from "../LinkButton/LinkButton";
+import LinkButton from "../LinkButton";
 import React from "react";
 import { urlFor } from "../../../../../config/sanity";
 import { CardBaseProps } from "./Card.types";

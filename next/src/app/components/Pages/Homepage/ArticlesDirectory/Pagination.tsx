@@ -1,4 +1,4 @@
-import LinkButton from "@/app/components/UI/LinkButton/LinkButton";
+import LinkButton from "@/app/components/UI/LinkButton";
 import React from "react";
 import { DirectoryPaginationProps } from "./ArticlesDirectory.types";
 

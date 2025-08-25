@@ -3,9 +3,9 @@ export const dynamic = "force-static";
 
 import React, { useState } from "react";
 
-import CustomLink from "../UI/CustomLink/CustomLink";
-import HeaderMenu from "./Header-menu/Header__menu";
-import LinkButton from "../UI/LinkButton/LinkButton";
+import CustomLink from "../UI/CustomLink";
+import HeaderMenu from "./Menu";
+import LinkButton from "../UI/LinkButton";
 
 const HeaderNav = () => {
   const [showMenu, setShowMenu] = useState(false);

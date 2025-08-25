@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import LinkButton from "../../UI/LinkButton/LinkButton";
-import { MenuGridProps } from "./Header__menu.types";
+import LinkButton from "../../UI/LinkButton";
+import { MenuGridProps } from "./Menu.types";
 
 const menus = [
   {

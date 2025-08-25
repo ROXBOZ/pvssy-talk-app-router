@@ -1,5 +1,5 @@
 import React from "react";
-import { FilterProps } from "./ArticlesDirectory.types";
+import { FilterProps } from "../ArticlesDirectory.types";
 
 const Filter: React.FC<FilterProps> = ({
   filterOptions,

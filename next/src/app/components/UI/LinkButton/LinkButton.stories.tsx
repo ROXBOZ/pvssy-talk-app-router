@@ -1,4 +1,4 @@
-import LinkButton from "./LinkButton";
+import LinkButton from ".";
 import React from "react";
 
 export const Default = {

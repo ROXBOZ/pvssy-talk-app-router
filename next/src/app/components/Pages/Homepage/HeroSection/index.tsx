@@ -1,7 +1,7 @@
-import HeroButton from "./HeroSection__button";
-import HeroImage from "./HeroSection__image";
+import HeroButton from "./Button";
+import HeroImage from "./Image";
 import { HeroBlockData } from "./HeroSection.types";
-import HeroText from "./HeroSection__text";
+import HeroText from "./Text";
 import React from "react";
 
 const HeroSection: React.FC<{ data: HeroBlockData }> = ({ data }) => {
