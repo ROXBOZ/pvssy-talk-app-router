@@ -1,8 +1,7 @@
 ---
 name: "New Component Request"
 about: "Template for tracking a new UI component"
-title: "[Component] <Component Name>"
-labels: ["component", "todo"]
+title: ""
 assignees: ""
 ---
 
@@ -15,6 +14,10 @@ assignees: ""
 <!-- Brief explanation of what this component should do -->
 
 ## To Do
+
+<!-- Brief explanation of what this component should do -->
+
+## Quality Checks
 
 - [ ] Refactore
 - [ ] Accessibility
