@@ -16,12 +16,13 @@ assignees: ""
 
 ## To Do
 
-- [ ] Design mockup created
-- [ ] Accessibility reviewed
-- [ ] Responsive behavior defined
-- [ ] Component implemented
-- [ ] Tests written
-- [ ] Documentation updated
+- [ ] Refactore
+- [ ] Accessibility
+- [ ] Responsive Design
+- [ ] Best Practices
+- [ ] Performances
+- [ ] Testing
+- [ ] SEO
 
 ## Notes
 
