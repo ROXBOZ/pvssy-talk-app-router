@@ -1,6 +1,6 @@
+import { HeroBlockData } from "./heroSection.types";
 import HeroButton from "./Button";
 import HeroImage from "./Image";
-import { HeroBlockData } from "./HeroSection.types";
 import HeroText from "./Text";
 import React from "react";
 

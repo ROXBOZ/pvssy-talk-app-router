@@ -1,0 +1,14 @@
+.dot--glow {
+  animation:
+    dot-glow-width 2s infinite alternate,
+    glow 8s infinite;
+}
+
+@keyframes dot-glow-width {
+  0% {
+    width: 2rem;
+  }
+  100% {
+    width: 4rem;
+  }
+}

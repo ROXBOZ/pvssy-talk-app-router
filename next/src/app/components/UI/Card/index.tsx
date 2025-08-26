@@ -1,8 +1,8 @@
+import { CardBaseProps } from "./card.types";
 import Image from "next/image";
 import LinkButton from "../LinkButton";
 import React from "react";
 import { useSanityImageUrl } from "../../../../../config/sanity";
-import { CardBaseProps } from "./Card.types";
 
 const Card: React.FC<CardBaseProps> = ({
   name,

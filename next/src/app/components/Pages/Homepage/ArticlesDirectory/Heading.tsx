@@ -1,11 +1,11 @@
 "use client";
 
-import Filter from "./Filters";
-import { PortableText } from "@portabletext/react";
+import { ArticlesHeadingProps, HeadingData } from "./articlesDirectory.types";
 
+import Filter from "./filters";
+import { PortableText } from "@portabletext/react";
 import React from "react";
 import { useSanityFetch } from "@/app/hooks/useSanityFetch";
-import { ArticlesHeadingProps, HeadingData } from "./ArticlesDirectory.types";
 
 const ArticlesHeading: React.FC<ArticlesHeadingProps> = ({
   filters,

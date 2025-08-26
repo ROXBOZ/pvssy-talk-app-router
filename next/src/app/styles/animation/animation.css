@@ -28,10 +28,6 @@
   animation: glow 8s infinite;
 }
 
-.dot--glow {
-  animation: glow 8s infinite;
-}
-
 @keyframes glow {
   0%,
   100% {

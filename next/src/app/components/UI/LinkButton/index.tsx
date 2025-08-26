@@ -1,7 +1,7 @@
-import Link from "next/link";
-import React from "react";
 import BurgerIcon from "../../Header/Menu/BurgerIcon";
-import { LinkButtonProps } from "./LinkButton.types";
+import Link from "next/link";
+import { LinkButtonProps } from "./linkButton.types";
+import React from "react";
 
 const LinkButton: React.FC<LinkButtonProps> = ({
   hasArrow,

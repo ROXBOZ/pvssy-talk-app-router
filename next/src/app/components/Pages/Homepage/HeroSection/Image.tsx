@@ -1,8 +1,7 @@
-import React from "react";
+import { HeroImageProps } from "./heroSection.types";
 import Image from "next/image";
-
+import React from "react";
 import { useSanityImageUrl } from "../../../../../../config/sanity";
-import { HeroImageProps } from "./HeroSection.types";
 
 const HeroImage: React.FC<HeroImageProps> = ({ figure, title }) => {
   const imageAsset = figure?.image?.asset;

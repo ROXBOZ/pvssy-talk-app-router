@@ -1,5 +1,6 @@
 import { extractFilters, filterArticles } from "./utils";
-import { Article } from "../ArticlesDirectory.types";
+
+import { Article } from "../articlesDirectory.types";
 
 describe("Article Directory Filtering", () => {
   const articles: Article[] = [

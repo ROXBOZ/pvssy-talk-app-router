@@ -1,6 +1,6 @@
+import { HeroButtonProps } from "./heroSection.types";
 import LinkButton from "@/app/components/UI/LinkButton";
 import React from "react";
-import { HeroButtonProps } from "./HeroSection.types";
 
 const HeroButton: React.FC<HeroButtonProps> = ({ callToAction }) => {
   if (!callToAction) return null;

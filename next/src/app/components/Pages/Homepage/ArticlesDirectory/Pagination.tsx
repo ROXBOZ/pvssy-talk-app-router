@@ -1,6 +1,6 @@
+import { DirectoryPaginationProps } from "./articlesDirectory.types";
 import LinkButton from "@/app/components/UI/LinkButton";
 import React from "react";
-import { DirectoryPaginationProps } from "./ArticlesDirectory.types";
 
 const DirectoryPagination: React.FC<DirectoryPaginationProps> = ({
   page,
