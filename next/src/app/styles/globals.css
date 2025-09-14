@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./typography.css";
+@import "./fonts.css";
 @import "./grid.css";
 @import "./animation/animation.scss";
 
