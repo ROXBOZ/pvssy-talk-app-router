@@ -2,7 +2,7 @@
 @import "./typography.css";
 @import "./fonts.css";
 @import "./grid.css";
-@import "./animation/animation.scss";
+@import "./animation/animation.css";
 
 @theme {
   --color-background: #fefdf4;
